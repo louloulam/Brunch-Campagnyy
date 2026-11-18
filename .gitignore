@@ -1,0 +1,6 @@
+node_modules/
+.netlify/
+.env
+_ancien-site-KLIKY.html
+# fichiers JS inutiles de l'ancien site KLIKY (enregistrement du navigateur)
+public/assets/*.téléchargement

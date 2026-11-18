@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#226677">
+<title>Admin – Brunch & Co</title>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:#f5f5f4;color:#1c1917;font-size:15px}
+button,input,select,textarea{font:inherit}
+.hidden{display:none!important}
+/* connexion */
+#login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:#226677}
+.login-box{background:#fff;border-radius:1.5rem;padding:2rem 1.5rem;width:100%;max-width:22rem;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.login-box img{width:84px;height:84px;border-radius:1rem;object-fit:contain;border:1px solid #e7e5e4}
+.login-box h1{font-family:ui-serif,Georgia,serif;font-size:1.4rem;margin:.75rem 0 .25rem}
+.login-box p{margin:0 0 1rem;color:#78716c;font-size:.85rem}
+input[type=text],input[type=number],input[type=password],input[type=search],select,textarea{width:100%;padding:.7rem .85rem;border:1px solid #d6d3d1;border-radius:.75rem;background:#fff;color:#1c1917}
+input:focus,select:focus,textarea:focus{outline:2px solid #226677;outline-offset:0;border-color:#226677}
+.btn{border:0;border-radius:.75rem;padding:.7rem 1rem;font-weight:700;cursor:pointer;background:#226677;color:#fff}
+.btn:hover{background:#1b5160}
+.btn.sec{background:#e7e5e4;color:#292524}
+.btn.sec:hover{background:#d6d3d1}
+.btn.danger{background:#fee2e2;color:#b91c1c}
+.btn.block{width:100%;margin-top:.75rem}
+.err{color:#b91c1c;font-size:.85rem;margin-top:.6rem;min-height:1.1em}
+/* barre du haut */
+header{position:sticky;top:0;z-index:20;background:#226677;color:#fff;padding:.75rem 1rem;padding-top:calc(.75rem + env(safe-area-inset-top));display:flex;align-items:center;gap:.75rem}
+header h1{font-size:1.05rem;margin:0;flex:1;font-family:ui-serif,Georgia,serif}
+header a,header button{color:#fff;background:rgba(255,255,255,.16);border:0;border-radius:.6rem;padding:.45rem .7rem;font-size:.8rem;font-weight:600;text-decoration:none;cursor:pointer}
+.status{font-size:.75rem;opacity:.9;min-width:5.5rem;text-align:right}
+main{max-width:46rem;margin:0 auto;padding:1rem 1rem 6rem}
+.toolbar{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1rem}
+.row2{display:flex;gap:.5rem}
+.row2>*{flex:1}
+.stats{display:flex;gap:.5rem;font-size:.8rem}
+.chip{background:#fff;border:1px solid #e7e5e4;border-radius:9999px;padding:.35rem .8rem;font-weight:600}
+.chip.warn{background:#fef2f2;border-color:#fecaca;color:#b91c1c}
+h2.cat{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#57534e;margin:1.4rem 0 .5rem;display:flex;justify-content:space-between;align-items:center}
+.item{display:flex;align-items:center;gap:.75rem;background:#fff;border:1px solid #e7e5e4;border-radius:1rem;padding:.6rem;margin-bottom:.5rem}
+.item.out{background:#fafaf9}
+.item.out .thumb,.item.out .info{opacity:.45}
+.thumb{width:3.4rem;height:3.4rem;border-radius:.7rem;object-fit:cover;background:#f5f5f4;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#a8a29e;font-style:italic;font-family:ui-serif,Georgia,serif}
+.info{flex:1;min-width:0;cursor:pointer}
+.info b{display:block;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.info span{font-size:.8rem;color:#226677;font-weight:700;font-family:ui-monospace,Menlo,monospace}
+/* interrupteur stock */
+.sw{flex-shrink:0;border:0;border-radius:9999px;padding:.5rem .8rem;font-size:.75rem;font-weight:800;cursor:pointer;min-width:6.3rem;transition:background .15s}
+.sw.on{background:#d1fae5;color:#047857}
+.sw.off{background:#fee2e2;color:#b91c1c}
+/* fenêtre d'édition */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:50;display:flex;align-items:flex-end;justify-content:center}
+@media(min-width:640px){.overlay{align-items:center}}
+.sheet{background:#fff;width:100%;max-width:30rem;max-height:94vh;overflow-y:auto;border-radius:1.5rem 1.5rem 0 0;padding:1.25rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom))}
+@media(min-width:640px){.sheet{border-radius:1.5rem}}
+.sheet h3{margin:0 0 1rem;font-size:1.1rem}
+label{display:block;font-size:.75rem;font-weight:700;color:#57534e;margin:.8rem 0 .3rem}
+.photo{display:flex;align-items:center;gap:.75rem}
+.photo .thumb{width:4.5rem;height:4.5rem}
+.actions{display:flex;gap:.5rem;margin-top:1.25rem}
+.actions .btn{flex:1}
+.toast{position:fixed;left:50%;bottom:calc(1rem + env(safe-area-inset-bottom));transform:translateX(-50%);background:#1c1917;color:#fff;padding:.6rem 1rem;border-radius:9999px;font-size:.85rem;z-index:80;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.toast.bad{background:#b91c1c}
+details{background:#fff;border:1px solid #e7e5e4;border-radius:1rem;padding:.75rem 1rem;margin-bottom:1rem}
+summary{cursor:pointer;font-weight:700;font-size:.9rem}
+</style>
+</head>
+<body>
+
+<section id="login">
+  <form class="login-box" id="login-form">
+    <img src="/assets/Brunch_Co_logo_1791062845856.jpeg" alt="Brunch & Co">
+    <h1>Espace gérant</h1>
+    <p>Gérez votre carte en direct</p>
+    <input type="password" id="pwd" placeholder="Mot de passe" autocomplete="current-password" required>
+    <button class="btn block" type="submit">Se connecter</button>
+    <div class="err" id="login-err"></div>
+  </form>
+</section>
+
+<section id="panel" class="hidden">
+  <header>
+    <h1>Brunch & Co – Carte</h1>
+    <span class="status" id="status"></span>
+    <a href="/" target="_blank">Voir le site</a>
+    <button id="logout">Quitter</button>
+  </header>
+  <main>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Rechercher un plat…">
+      <div class="row2">
+        <select id="filter"></select>
+        <button class="btn" id="add">+ Nouveau plat</button>
+      </div>
+      <div class="stats"><span class="chip" id="stat-on"></span><span class="chip warn" id="stat-off"></span></div>
+    </div>
+    <div id="list"></div>
+
+    <details id="info-box">
+      <summary>Infos du restaurant (horaires, téléphone…)</summary>
+      <div id="info-fields"></div>
+      <button class="btn block" id="save-info">Enregistrer les infos</button>
+    </details>
+    <button class="btn sec block" id="restock">Tout remettre en stock</button>
+  </main>
+</section>
+
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+
+<script>
+(function () {
+  'use strict';
+  var KEY = 'bc_admin_pwd';
+  var $ = function (id) { return document.getElementById(id); };
+  var data = null, pwd = '', saveTimer = null, saving = false, dirty = false;
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function imgSrc(v) { return !v ? '' : /^(\/|https?:|data:)/.test(v) ? v : '/assets/' + v; }
+  function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+  function fmt(n) { return Number(n).toLocaleString('fr-FR') + ' DA'; }
+
+  function toast(msg, bad) {
+    var t = document.createElement('div');
+    t.className = 'toast' + (bad ? ' bad' : '');
+    t.textContent = msg;
+    $('toast-root').appendChild(t);
+    setTimeout(function () { t.remove(); }, 2200);
+  }
+  function status(txt) { $('status').textContent = txt; }
+
+  /* ---------- API ---------- */
+  function api(method, body) {
+    return fetch('/api/menu', {
+      method: method,
+      headers: { 'content-type': 'application/json', 'x-admin-password': pwd },
+      body: body ? JSON.stringify(body) : undefined
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok) { var e = new Error(j.error || 'Erreur ' + r.status); e.status = r.status; throw e; }
+        return j;
+      });
+    });
+  }
+
+  function save() {
+    dirty = true;
+    status('Enregistrement…');
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(flush, 350);
+  }
+  function flush() {
+    if (saving) { saveTimer = setTimeout(flush, 300); return; }
+    saving = true; dirty = false;
+    api('PUT', data).then(function () {
+      saving = false;
+      status(dirty ? 'Enregistrement…' : '✓ Enregistré');
+    }).catch(function (e) {
+      saving = false;
+      status('⚠ Non enregistré');
+      toast(e.message, true);
+      if (e.status === 401) logout();
+    });
+  }
+
+  /* ---------- Connexion ---------- */
+  function showPanel() {
+    $('login').classList.add('hidden');
+    $('panel').classList.remove('hidden');
+  }
+  function logout() {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    pwd = ''; location.reload();
+  }
+  function enter(p) {
+    pwd = p;
+    return api('POST', {}).then(function () {
+      try { localStorage.setItem(KEY, p); } catch (e) {}
+      return fetch('/api/menu', { cache: 'no-store' }).then(function (r) { return r.json(); });
+    }).then(function (d) {
+      data = d; showPanel(); renderAll(); status('');
+    });
+  }
+  $('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    $('login-err').textContent = '';
+    enter($('pwd').value).catch(function (err) { $('login-err').textContent = err.message; });
+  });
+  $('logout').addEventListener('click', logout);
+  try {
+    var saved = localStorage.getItem(KEY);
+    if (saved) enter(saved).catch(function () { try { localStorage.removeItem(KEY); } catch (e) {} });
+  } catch (e) {}
+
+  /* ---------- Rendu ---------- */
+  function renderAll() { renderFilter(); renderList(); renderInfo(); }
+
+  function renderFilter() {
+    var cur = $('filter').value || 'all';
+    $('filter').innerHTML = '<option value="all">Toutes les catégories</option>' +
+      data.categories.map(function (c) { return '<option>' + esc(c) + '</option>'; }).join('');
+    $('filter').value = data.categories.indexOf(cur) > -1 ? cur : 'all';
+  }
+
+  function renderList() {
+    var q = norm($('search').value), f = $('filter').value || 'all';
+    var on = data.items.filter(function (i) { return i.available !== false; }).length;
+    $('stat-on').textContent = on + ' en stock';
+    $('stat-off').textContent = (data.items.length - on) + ' en rupture';
+
+    var html = '';
+    data.categories.forEach(function (c) {
+      if (f !== 'all' && f !== c) return;
+      var list = data.items.filter(function (i) { return i.cat === c && (!q || norm(i.name).indexOf(q) > -1); });
+      if (!list.length) return;
+      html += '<h2 class="cat"><span>' + esc(c) + ' (' + list.length + ')</span></h2>';
+      list.forEach(function (i) {
+        var ok = i.available !== false;
+        html += '<div class="item' + (ok ? '' : ' out') + '" data-id="' + esc(i.id) + '">' +
+          (i.image ? '<img class="thumb" loading="lazy" src="' + esc(imgSrc(i.image)) + '" alt="">' : '<div class="thumb">' + esc((i.name || '?').charAt(0)) + '</div>') +
+          '<div class="info" data-edit="1"><b>' + esc(i.name) + '</b><span>' + fmt(i.price) + '</span></div>' +
+          '<button class="sw ' + (ok ? 'on' : 'off') + '" data-toggle="1">' + (ok ? '● En stock' : '○ Épuisé') + '</button></div>';
+      });
+    });
+    $('list').innerHTML = html || '<p style="text-align:center;color:#78716c;padding:2rem">Aucun plat.</p>';
+  }
+
+  $('search').addEventListener('input', renderList);
+  $('filter').addEventListener('change', renderList);
+
+  $('list').addEventListener('click', function (e) {
+    var row = e.target.closest('.item'); if (!row) return;
+    var it = find(row.getAttribute('data-id')); if (!it) return;
+    if (e.target.closest('[data-toggle]')) {
+      it.available = it.available === false;
+      renderList(); save();
+    } else if (e.target.closest('[data-edit]') || e.target.closest('.thumb')) {
+      openEdit(it);
+    }
+  });
+  function find(id) { return data.items.filter(function (i) { return i.id === id; })[0]; }
+
+  $('restock').addEventListener('click', function () {
+    if (!confirm('Remettre TOUS les plats en stock ?')) return;
+    data.items.forEach(function (i) { i.available = true; });
+    renderList(); save();
+  });
+
+  /* ---------- Édition d'un plat ---------- */
+  $('add').addEventListener('click', function () {
+    openEdit({ id: 'p' + Date.now().toString(36), name: '', price: 0, desc: '', tag: '', image: '', cat: data.categories[0] || '', available: true, _new: true });
+  });
+
+  function openEdit(it) {
+    var isNew = !!it._new;
+    var work = JSON.parse(JSON.stringify(it)); delete work._new;
+    var catOpts = data.categories.map(function (c) { return '<option' + (c === work.cat ? ' selected' : '') + '>' + esc(c) + '</option>'; }).join('') + '<option value="__new">+ Nouvelle catégorie…</option>';
+    var tagOpts = ['', 'Best Seller', 'Coup de Cœur', 'Populaire'].map(function (t) { return '<option value="' + esc(t) + '"' + (t === work.tag ? ' selected' : '') + '>' + (t || 'Aucun badge') + '</option>'; }).join('');
+
+    var root = $('modal-root');
+    root.innerHTML = '<div class="overlay"><div class="sheet"><h3>' + (isNew ? 'Nouveau plat' : 'Modifier le plat') + '</h3>' +
+      '<label>Photo</label><div class="photo"><div id="ph"></div><div style="flex:1"><input type="file" id="file" accept="image/*"><div class="err" id="ph-err" style="margin:.2rem 0 0"></div></div></div>' +
+      '<label>Nom</label><input type="text" id="f-name" value="' + esc(work.name) + '">' +
+      '<label>Prix (DA)</label><input type="number" id="f-price" inputmode="numeric" min="0" step="50" value="' + esc(work.price) + '">' +
+      '<label>Catégorie</label><select id="f-cat">' + catOpts + '</select>' +
+      '<label>Description / ingrédients</label><textarea id="f-desc" rows="3">' + esc(work.desc) + '</textarea>' +
+      '<label>Badge</label><select id="f-tag">' + tagOpts + '</select>' +
+      '<div class="actions">' + (isNew ? '' : '<button class="btn danger" id="del">Supprimer</button>') + '<button class="btn sec" id="cancel">Annuler</button><button class="btn" id="ok">Enregistrer</button></div></div></div>';
+
+    function drawPhoto() {
+      $('ph').innerHTML = work.image ? '<img class="thumb" style="width:4.5rem;height:4.5rem" src="' + esc(imgSrc(work.image)) + '" alt="">' : '<div class="thumb" style="width:4.5rem;height:4.5rem">' + esc((work.name || '?').charAt(0)) + '</div>';
+    }
+    drawPhoto();
+
+    $('f-cat').addEventListener('change', function (e) {
+      if (e.target.value === '__new') {
+        var n = (prompt('Nom de la nouvelle catégorie :') || '').trim().toUpperCase();
+        if (n && data.categories.indexOf(n) === -1) {
+          data.categories.push(n);
+          var o = document.createElement('option'); o.textContent = n;
+          e.target.insertBefore(o, e.target.lastChild); e.target.value = n;
+        } else if (n) { e.target.value = n; } else { e.target.value = work.cat; }
+      }
+    });
+
+    $('file').addEventListener('change', function (e) {
+      var f = e.target.files[0]; if (!f) return;
+      $('ph-err').textContent = 'Envoi de la photo…';
+      shrink(f).then(function (blob) {
+        return fetch('/api/image', { method: 'POST', headers: { 'content-type': 'image/jpeg', 'x-admin-password': pwd }, body: blob });
+      }).then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || 'Erreur'); return j; }); })
+        .then(function (j) { work.image = j.url; $('ph-err').textContent = ''; drawPhoto(); })
+        .catch(function (err) { $('ph-err').textContent = err.message; });
+    });
+
+    $('cancel').addEventListener('click', function () { root.innerHTML = ''; });
+    root.firstChild.addEventListener('click', function (e) { if (e.target === root.firstChild) root.innerHTML = ''; });
+    if (!isNew) $('del').addEventListener('click', function () {
+      if (!confirm('Supprimer définitivement « ' + work.name + ' » ?\n(Astuce : « Épuisé » le retire de la carte sans le supprimer.)')) return;
+      data.items = data.items.filter(function (i) { return i.id !== work.id; });
+      root.innerHTML = ''; renderAll(); save();
+    });
+    $('ok').addEventListener('click', function () {
+      var name = $('f-name').value.trim();
+      if (!name) { $('f-name').focus(); return; }
+      work.name = name;
+      work.price = Math.max(0, Math.round(Number($('f-price').value) || 0));
+      work.cat = $('f-cat').value;
+      work.desc = $('f-desc').value.trim();
+      work.tag = $('f-tag').value;
+      if (isNew) data.items.push(work);
+      else { var t = find(work.id); Object.keys(work).forEach(function (k) { t[k] = work[k]; }); }
+      root.innerHTML = ''; renderAll(); save();
+    });
+  }
+
+  function shrink(file) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image(), url = URL.createObjectURL(file);
+      img.onload = function () {
+        var max = 900, s = Math.min(1, max / Math.max(img.width, img.height));
+        var c = document.createElement('canvas');
+        c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+        var ctx = c.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+        ctx.drawImage(img, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        c.toBlob(function (b) { b ? resolve(b) : reject(new Error('Image illisible')); }, 'image/jpeg', 0.82);
+      };
+      img.onerror = function () { reject(new Error('Image illisible')); };
+      img.src = url;
+    });
+  }
+
+  /* ---------- Infos du restaurant ---------- */
+  var INFO_FIELDS = [
+    ['name', 'Nom'], ['tagline', 'Slogan'], ['address', 'Adresse'], ['phone', 'Téléphone'],
+    ['email', 'Email'], ['hours', 'Horaires'], ['instagram', 'Lien Instagram'], ['facebook', 'Lien Facebook'], ['note', 'Note (Wi-Fi…)']
+  ];
+  function renderInfo() {
+    var info = data.info || {};
+    $('info-fields').innerHTML = INFO_FIELDS.map(function (f) {
+      var long = f[0] === 'tagline' || f[0] === 'hours' || f[0] === 'note';
+      return '<label>' + f[1] + '</label>' + (long
+        ? '<textarea rows="2" data-k="' + f[0] + '">' + esc(info[f[0]]) + '</textarea>'
+        : '<input type="text" data-k="' + f[0] + '" value="' + esc(info[f[0]]) + '">');
+    }).join('');
+  }
+  $('save-info').addEventListener('click', function () {
+    data.info = data.info || {};
+    Array.prototype.forEach.call($('info-fields').querySelectorAll('[data-k]'), function (el) { data.info[el.getAttribute('data-k')] = el.value; });
+    save(); toast('Infos enregistrées');
+  });
+})();
+</script>
+</body>
+</html>
