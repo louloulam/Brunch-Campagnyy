@@ -1,21 +1,17 @@
-// Netlify Function : photos ajoutées depuis le panneau admin (Netlify Blobs).
-// GET  /api/image/<id>  -> public
-// POST /api/image       -> admin (corps = image brute, en-tête x-admin-password)
+// Photos ajoutées depuis le panneau admin.
+// GET  /api/image/<id>  -> public (stockage Netlify Blobs, affichage immédiat)
+// POST /api/image       -> admin (corps = image brute) ; copie aussi envoyée sur GitHub
 import { getStore } from "@netlify/blobs";
-import { timingSafeEqual } from "node:crypto";
+import { checkAuth } from "./lib/auth.mjs";
+import { commitFile, githubConfigured } from "./lib/github.mjs";
 
 export const config = { path: ["/api/image", "/api/image/*"] };
 
 const MAX_BYTES = 3 * 1024 * 1024;
-const TYPES = ["image/jpeg", "image/png", "image/webp"];
+const EXT = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
 
-function authorized(req) {
-  const expected = process.env.ADMIN_PASSWORD;
-  if (!expected) return false;
-  const a = Buffer.from(req.headers.get("x-admin-password") || "");
-  const b = Buffer.from(expected);
-  return a.length === b.length && timingSafeEqual(a, b);
-}
+const err = (msg, status) =>
+  new Response(JSON.stringify({ error: msg }), { status, headers: { "content-type": "application/json" } });
 
 export default async (req) => {
   const store = getStore("images");
@@ -34,14 +30,24 @@ export default async (req) => {
   }
 
   if (req.method === "POST") {
-    if (!authorized(req)) return new Response(JSON.stringify({ error: "Non autorisé." }), { status: 401 });
+    if (checkAuth(req) !== "ok") return err("Non autorisé.", 401);
     const type = (req.headers.get("content-type") || "").split(";")[0];
-    if (!TYPES.includes(type)) return new Response(JSON.stringify({ error: "Format non supporté." }), { status: 400 });
+    if (!EXT[type]) return err("Format non supporté.", 400);
     const buf = await req.arrayBuffer();
-    if (buf.byteLength > MAX_BYTES) return new Response(JSON.stringify({ error: "Image trop lourde." }), { status: 413 });
+    if (buf.byteLength > MAX_BYTES) return err("Image trop lourde.", 413);
+
     const id = crypto.randomUUID();
     await store.set(id, buf, { metadata: { type } });
-    return new Response(JSON.stringify({ url: "/api/image/" + id }), {
+
+    // Copie de sauvegarde dans GitHub (si configuré) — sans bloquer l'affichage en cas d'échec
+    let github = false;
+    if (githubConfigured()) {
+      try {
+        await commitFile(`public/assets/uploads/${id}.${EXT[type]}`, Buffer.from(buf), "Nouvelle photo ajoutée depuis l'admin");
+        github = true;
+      } catch (e) { /* ignoré */ }
+    }
+    return new Response(JSON.stringify({ url: "/api/image/" + id, github }), {
       headers: { "content-type": "application/json" },
     });
   }

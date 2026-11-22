@@ -1,9 +1,9 @@
-// Netlify Function : lit / enregistre le menu (stocké dans Netlify Blobs).
-// GET  /api/menu            -> public, renvoie le menu
-// POST /api/menu            -> vérifie le mot de passe admin
-// PUT  /api/menu            -> admin, enregistre le menu complet
+// Netlify Function : lit / enregistre le menu (stocké dans Netlify Blobs = mise à jour instantanée).
+// GET  /api/menu  -> public, renvoie le menu
+// POST /api/menu  -> vérifie email + mot de passe admin
+// PUT  /api/menu  -> admin, enregistre le menu complet
 import { getStore } from "@netlify/blobs";
-import { timingSafeEqual } from "node:crypto";
+import { checkAuth } from "./lib/auth.mjs";
 
 export const config = { path: "/api/menu" };
 
@@ -13,15 +13,7 @@ const json = (data, status = 200) =>
     headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" },
   });
 
-function checkPassword(req) {
-  const expected = process.env.ADMIN_PASSWORD;
-  if (!expected) return "missing";
-  const given = req.headers.get("x-admin-password") || "";
-  const a = Buffer.from(given);
-  const b = Buffer.from(expected);
-  if (a.length !== b.length) return "bad";
-  return timingSafeEqual(a, b) ? "ok" : "bad";
-}
+const HEX = /^#[0-9a-f]{6}$/i;
 
 function clean(body) {
   if (!body || !Array.isArray(body.items) || !Array.isArray(body.categories)) return null;
@@ -41,7 +33,11 @@ function clean(body) {
   for (const k of ["name", "tagline", "address", "phone", "email", "hours", "instagram", "facebook", "note"]) {
     info[k] = str(body.info?.[k], 600);
   }
-  return { categories, items, info };
+  const theme = {
+    bg: HEX.test(body.theme?.bg || "") ? body.theme.bg : "#226677",
+    accent: HEX.test(body.theme?.accent || "") ? body.theme.accent : "#226677",
+  };
+  return { categories, items, info, theme };
 }
 
 export default async (req) => {
@@ -57,9 +53,9 @@ export default async (req) => {
     return json(data);
   }
 
-  const auth = checkPassword(req);
-  if (auth === "missing") return json({ error: "ADMIN_PASSWORD n'est pas défini dans Netlify." }, 503);
-  if (auth !== "ok") return json({ error: "Mot de passe incorrect." }, 401);
+  const auth = checkAuth(req);
+  if (auth === "missing") return json({ error: "ADMIN_EMAIL et ADMIN_PASSWORD ne sont pas définis dans Netlify." }, 503);
+  if (auth !== "ok") return json({ error: "Email ou mot de passe incorrect." }, 401);
 
   if (req.method === "POST") return json({ ok: true });
 

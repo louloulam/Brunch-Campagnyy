@@ -36,7 +36,7 @@ body{margin:0;background:#226677}
 .bc-body{padding:1.25rem 1.5rem 1.75rem}
 .bc-body h2{margin:0;font-size:1.25rem;font-weight:800;font-family:ui-serif,Georgia,serif}
 .bc-body p{margin:.5rem 0 0;font-size:.85rem;color:#57534e;line-height:1.6}
-.bc-price{margin-top:1rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800;font-size:1.25rem;color:#226677}
+.bc-price{margin-top:1rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800;font-size:1.25rem;color:var(--accent,#226677)}
 .bc-close{position:absolute;top:.75rem;right:.75rem;width:2.25rem;height:2.25rem;border-radius:9999px;border:0;background:rgba(255,255,255,.92);font-size:1.25rem;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)}
 @keyframes bcfade{from{opacity:0}to{opacity:1}}
 @keyframes bcup{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}

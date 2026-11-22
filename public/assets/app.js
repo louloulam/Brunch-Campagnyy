@@ -64,19 +64,31 @@
       '<div class="flex items-start justify-between gap-2"><h3 class="text-sm font-bold text-stone-900 group-hover:text-stone-700 transition-colors leading-snug line-clamp-1">' + esc(it.name) + '</h3>' + tag + '</div>' +
       '<p class="text-xs text-stone-500 line-clamp-2 mt-1 leading-relaxed">' + esc(it.desc) + '</p></div>' +
       '<div class="flex items-center justify-between mt-2 pt-2 border-t border-stone-100">' +
-      '<span class="text-sm sm:text-base font-extrabold font-mono" style="color: rgb(34, 102, 119);">' + price(it.price) + '</span>' +
+      '<span class="text-sm sm:text-base font-extrabold font-mono" style="color: var(--accent, #226677);">' + price(it.price) + '</span>' +
       '<span class="text-xs font-semibold text-stone-500 group-hover:text-stone-900 flex items-center gap-0.5 transition-colors">Détails ' + ICONS.chevron('w-3.5 h-3.5') + '</span>' +
       '</div></div></div>';
   }
 
   function btnStyle(active) {
     return active
-      ? 'background-color: rgb(34, 102, 119); color: rgb(255, 255, 255);'
+      ? 'background-color: var(--accent, #226677); color: #fff;'
       : 'background-color: rgb(245, 245, 244); color: rgb(87, 83, 78);';
+  }
+
+  function applyTheme(t) {
+    var hex = /^#[0-9a-f]{6}$/i;
+    var bg = t && hex.test(t.bg) ? t.bg : '#226677';
+    var accent = t && hex.test(t.accent) ? t.accent : '#226677';
+    app.style.backgroundColor = bg;
+    document.body.style.backgroundColor = bg;
+    document.documentElement.style.setProperty('--accent', accent);
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', bg);
   }
 
   function render() {
     var d = state.data, info = d.info || {};
+    applyTheme(d.theme);
     var items = visibleItems();
     var counts = {};
     items.forEach(function (i) { counts[i.cat] = (counts[i.cat] || 0) + 1; });

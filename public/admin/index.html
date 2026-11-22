@@ -31,7 +31,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid #226677;outline-offset
 header{position:sticky;top:0;z-index:20;background:#226677;color:#fff;padding:.75rem 1rem;padding-top:calc(.75rem + env(safe-area-inset-top));display:flex;align-items:center;gap:.75rem}
 header h1{font-size:1.05rem;margin:0;flex:1;font-family:ui-serif,Georgia,serif}
 header a,header button{color:#fff;background:rgba(255,255,255,.16);border:0;border-radius:.6rem;padding:.45rem .7rem;font-size:.8rem;font-weight:600;text-decoration:none;cursor:pointer}
-.status{font-size:.75rem;opacity:.9;min-width:5.5rem;text-align:right}
+.status{font-size:.7rem;opacity:.9;max-width:9rem;text-align:right;line-height:1.2}
 main{max-width:46rem;margin:0 auto;padding:1rem 1rem 6rem}
 .toolbar{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1rem}
 .row2{display:flex;gap:.5rem}
@@ -75,6 +75,7 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
     <img src="/assets/Brunch_Co_logo_1791062845856.jpeg" alt="Brunch & Co">
     <h1>Espace gérant</h1>
     <p>Gérez votre carte en direct</p>
+    <input type="text" id="email" placeholder="Email" autocomplete="username" inputmode="email" autocapitalize="none" required style="margin-bottom:.6rem">
     <input type="password" id="pwd" placeholder="Mot de passe" autocomplete="current-password" required>
     <button class="btn block" type="submit">Se connecter</button>
     <div class="err" id="login-err"></div>
@@ -100,7 +101,7 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
     <div id="list"></div>
 
     <details id="info-box">
-      <summary>Infos du restaurant (horaires, téléphone…)</summary>
+      <summary>Infos et apparence du site (horaires, couleurs…)</summary>
       <div id="info-fields"></div>
       <button class="btn block" id="save-info">Enregistrer les infos</button>
     </details>
@@ -116,7 +117,7 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
   'use strict';
   var KEY = 'bc_admin_pwd';
   var $ = function (id) { return document.getElementById(id); };
-  var data = null, pwd = '', saveTimer = null, saving = false, dirty = false;
+  var data = null, pwd = '', email = '', saveTimer = null, saving = false, dirty = false;
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   function imgSrc(v) { return !v ? '' : /^(\/|https?:|data:)/.test(v) ? v : '/assets/' + v; }
@@ -136,7 +137,7 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
   function api(method, body) {
     return fetch('/api/menu', {
       method: method,
-      headers: { 'content-type': 'application/json', 'x-admin-password': pwd },
+      headers: { 'content-type': 'application/json', 'x-admin-password': pwd, 'x-admin-email': email },
       body: body ? JSON.stringify(body) : undefined
     }).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (j) {
@@ -158,12 +159,31 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
     api('PUT', data).then(function () {
       saving = false;
       status(dirty ? 'Enregistrement…' : '✓ Enregistré');
+      scheduleSync();
     }).catch(function (e) {
       saving = false;
       status('⚠ Non enregistré');
       toast(e.message, true);
       if (e.status === 401) logout();
     });
+  }
+
+  /* ---------- Envoi automatique vers GitHub (après 8 s sans modification) ---------- */
+  var syncTimer = null, warned = false;
+  function scheduleSync() { clearTimeout(syncTimer); syncTimer = setTimeout(sync, 8000); }
+  function sync() {
+    if (saving || dirty) { scheduleSync(); return; }
+    status('Envoi vers GitHub…');
+    fetch('/api/sync', { method: 'POST', headers: { 'x-admin-password': pwd, 'x-admin-email': email } })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j.ok) status(j.committed ? '✓ Enregistré · GitHub ✓' : '✓ Enregistré');
+        else {
+          status('✓ Enregistré · GitHub ⚠');
+          if (!warned) { warned = true; toast(j.error || 'Erreur GitHub', true); }
+        }
+      })
+      .catch(function () { status('✓ Enregistré'); });
   }
 
   /* ---------- Connexion ---------- */
@@ -175,10 +195,10 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
     try { localStorage.removeItem(KEY); } catch (e) {}
     pwd = ''; location.reload();
   }
-  function enter(p) {
-    pwd = p;
+  function enter(em, p) {
+    email = em.trim(); pwd = p;
     return api('POST', {}).then(function () {
-      try { localStorage.setItem(KEY, p); } catch (e) {}
+      try { localStorage.setItem(KEY, JSON.stringify({ e: email, p: p })); } catch (e) {}
       return fetch('/api/menu', { cache: 'no-store' }).then(function (r) { return r.json(); });
     }).then(function (d) {
       data = d; showPanel(); renderAll(); status('');
@@ -187,12 +207,12 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
   $('login-form').addEventListener('submit', function (e) {
     e.preventDefault();
     $('login-err').textContent = '';
-    enter($('pwd').value).catch(function (err) { $('login-err').textContent = err.message; });
+    enter($('email').value, $('pwd').value).catch(function (err) { $('login-err').textContent = err.message; });
   });
   $('logout').addEventListener('click', logout);
   try {
-    var saved = localStorage.getItem(KEY);
-    if (saved) enter(saved).catch(function () { try { localStorage.removeItem(KEY); } catch (e) {} });
+    var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (saved && saved.e && saved.p) enter(saved.e, saved.p).catch(function () { try { localStorage.removeItem(KEY); } catch (e) {} });
   } catch (e) {}
 
   /* ---------- Rendu ---------- */
@@ -290,7 +310,7 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
       var f = e.target.files[0]; if (!f) return;
       $('ph-err').textContent = 'Envoi de la photo…';
       shrink(f).then(function (blob) {
-        return fetch('/api/image', { method: 'POST', headers: { 'content-type': 'image/jpeg', 'x-admin-password': pwd }, body: blob });
+        return fetch('/api/image', { method: 'POST', headers: { 'content-type': 'image/jpeg', 'x-admin-password': pwd, 'x-admin-email': email }, body: blob });
       }).then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || 'Erreur'); return j; }); })
         .then(function (j) { work.image = j.url; $('ph-err').textContent = ''; drawPhoto(); })
         .catch(function (err) { $('ph-err').textContent = err.message; });
@@ -341,16 +361,22 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
   ];
   function renderInfo() {
     var info = data.info || {};
+    var th = data.theme || {};
+    th = { bg: th.bg || '#226677', accent: th.accent || '#226677' };
     $('info-fields').innerHTML = INFO_FIELDS.map(function (f) {
       var long = f[0] === 'tagline' || f[0] === 'hours' || f[0] === 'note';
       return '<label>' + f[1] + '</label>' + (long
         ? '<textarea rows="2" data-k="' + f[0] + '">' + esc(info[f[0]]) + '</textarea>'
         : '<input type="text" data-k="' + f[0] + '" value="' + esc(info[f[0]]) + '">');
-    }).join('');
+    }).join('') +
+      '<label>Couleur du fond de la page</label><input type="color" data-t="bg" value="' + esc(th.bg) + '" style="height:3rem;padding:.2rem">' +
+      '<label>Couleur des prix et des boutons</label><input type="color" data-t="accent" value="' + esc(th.accent) + '" style="height:3rem;padding:.2rem">';
   }
   $('save-info').addEventListener('click', function () {
     data.info = data.info || {};
     Array.prototype.forEach.call($('info-fields').querySelectorAll('[data-k]'), function (el) { data.info[el.getAttribute('data-k')] = el.value; });
+    data.theme = data.theme || {};
+    Array.prototype.forEach.call($('info-fields').querySelectorAll('[data-t]'), function (el) { data.theme[el.getAttribute('data-t')] = el.value; });
     save(); toast('Infos enregistrées');
   });
 })();
