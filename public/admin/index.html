@@ -75,7 +75,7 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
     <img src="/assets/Brunch_Co_logo_1791062845856.jpeg" alt="Brunch & Co">
     <h1>Espace gérant</h1>
     <p>Gérez votre carte en direct</p>
-    <input type="text" id="email" placeholder="Email" autocomplete="username" inputmode="email" autocapitalize="none" required style="margin-bottom:.6rem">
+    <input type="text" id="email" placeholder="Email (si demandé)" autocomplete="username" inputmode="email" autocapitalize="none" style="margin-bottom:.6rem">
     <input type="password" id="pwd" placeholder="Mot de passe" autocomplete="current-password" required>
     <button class="btn block" type="submit">Se connecter</button>
     <div class="err" id="login-err"></div>
@@ -202,6 +202,7 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
       return fetch('/api/menu', { cache: 'no-store' }).then(function (r) { return r.json(); });
     }).then(function (d) {
       data = d; showPanel(); renderAll(); status('');
+      $('logout').classList.toggle('hidden', !email && !pwd);
     });
   }
   $('login-form').addEventListener('submit', function (e) {
@@ -210,10 +211,12 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
     enter($('email').value, $('pwd').value).catch(function (err) { $('login-err').textContent = err.message; });
   });
   $('logout').addEventListener('click', logout);
-  try {
-    var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
-    if (saved && saved.e && saved.p) enter(saved.e, saved.p).catch(function () { try { localStorage.removeItem(KEY); } catch (e) {} });
-  } catch (e) {}
+  var saved = null;
+  try { saved = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+  // Essaie d'entrer directement (admin ouvert) ; sinon l'écran de connexion reste affiché
+  enter(saved ? saved.e || '' : '', saved ? saved.p || '' : '').catch(function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+  });
 
   /* ---------- Rendu ---------- */
   function renderAll() { renderFilter(); renderList(); renderInfo(); }
