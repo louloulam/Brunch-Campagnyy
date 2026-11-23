@@ -40,7 +40,8 @@
     return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
   function visibleItems() {
-    return (state.data.items || []).filter(function (i) { return i.available !== false; });
+    var hidden = state.data.hiddenCats || [];
+    return (state.data.items || []).filter(function (i) { return i.available !== false && hidden.indexOf(i.cat) === -1; });
   }
 
   function load() {

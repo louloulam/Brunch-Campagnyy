@@ -29,6 +29,10 @@ function clean(body) {
     available: i.available !== false,
   }));
   const categories = body.categories.slice(0, 100).map((c) => str(c, 80));
+  const hiddenCats = (Array.isArray(body.hiddenCats) ? body.hiddenCats : [])
+    .slice(0, 100)
+    .map((c) => str(c, 80))
+    .filter((c) => categories.includes(c));
   const info = {};
   for (const k of ["name", "tagline", "address", "phone", "email", "hours", "instagram", "facebook", "note"]) {
     info[k] = str(body.info?.[k], 600);
@@ -37,7 +41,7 @@ function clean(body) {
     bg: HEX.test(body.theme?.bg || "") ? body.theme.bg : "#226677",
     accent: HEX.test(body.theme?.accent || "") ? body.theme.accent : "#226677",
   };
-  return { seedVersion: Math.round(Number(body.seedVersion) || 0), categories, items, info, theme };
+  return { seedVersion: Math.round(Number(body.seedVersion) || 0), categories, hiddenCats, items, info, theme };
 }
 
 export default async (req) => {

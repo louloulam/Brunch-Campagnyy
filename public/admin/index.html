@@ -48,7 +48,7 @@ h2.cat{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#5753
 .info b{display:block;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .info span{font-size:.8rem;color:#226677;font-weight:700;font-family:ui-monospace,Menlo,monospace}
 /* interrupteur stock */
-.sw{flex-shrink:0;border:0;border-radius:9999px;padding:.5rem .8rem;font-size:.75rem;font-weight:800;cursor:pointer;min-width:6.3rem;transition:background .15s}
+.sw{flex-shrink:0;border:0;text-transform:none;letter-spacing:0;border-radius:9999px;padding:.5rem .8rem;font-size:.75rem;font-weight:800;cursor:pointer;min-width:6.3rem;transition:background .15s}
 .sw.on{background:#d1fae5;color:#047857}
 .sw.off{background:#fee2e2;color:#b91c1c}
 /* fenêtre d'édition */
@@ -230,7 +230,7 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
 
   function renderList() {
     var q = norm($('search').value), f = $('filter').value || 'all';
-    var on = data.items.filter(function (i) { return i.available !== false; }).length;
+    var on = data.items.filter(function (i) { return i.available !== false && !hiddenCat(i.cat); }).length;
     $('stat-on').textContent = on + ' en stock';
     $('stat-off').textContent = (data.items.length - on) + ' en rupture';
 
@@ -239,10 +239,11 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
       if (f !== 'all' && f !== c) return;
       var list = data.items.filter(function (i) { return i.cat === c && (!q || norm(i.name).indexOf(q) > -1); });
       if (!list.length) return;
-      html += '<h2 class="cat"><span>' + esc(c) + ' (' + list.length + ')</span></h2>';
+      var hc = hiddenCat(c);
+      html += '<h2 class="cat"><span>' + esc(c) + ' (' + list.length + ')</span><button class="sw ' + (hc ? 'off' : 'on') + '" data-cat="' + esc(c) + '">' + (hc ? '○ Catégorie masquée' : '● Catégorie visible') + '</button></h2>';
       list.forEach(function (i) {
         var ok = i.available !== false;
-        html += '<div class="item' + (ok ? '' : ' out') + '" data-id="' + esc(i.id) + '">' +
+        html += '<div class="item' + ((ok && !hc) ? '' : ' out') + '" data-id="' + esc(i.id) + '">' +
           (i.image ? '<img class="thumb" loading="lazy" src="' + esc(imgSrc(i.image)) + '" alt="">' : '<div class="thumb">' + esc((i.name || '?').charAt(0)) + '</div>') +
           '<div class="info" data-edit="1"><b>' + esc(i.name) + '</b><span>' + fmt(i.price) + '</span></div>' +
           '<button class="sw ' + (ok ? 'on' : 'off') + '" data-toggle="1">' + (ok ? '● En stock' : '○ Épuisé') + '</button></div>';
@@ -255,6 +256,8 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
   $('filter').addEventListener('change', renderList);
 
   $('list').addEventListener('click', function (e) {
+    var cb = e.target.closest('[data-cat]');
+    if (cb) { toggleCat(cb.getAttribute('data-cat')); return; }
     var row = e.target.closest('.item'); if (!row) return;
     var it = find(row.getAttribute('data-id')); if (!it) return;
     if (e.target.closest('[data-toggle]')) {
@@ -264,11 +267,19 @@ summary{cursor:pointer;font-weight:700;font-size:.9rem}
       openEdit(it);
     }
   });
+  function hiddenCat(c) { return (data.hiddenCats || []).indexOf(c) > -1; }
+  function toggleCat(c) {
+    data.hiddenCats = data.hiddenCats || [];
+    var i = data.hiddenCats.indexOf(c);
+    if (i > -1) data.hiddenCats.splice(i, 1); else data.hiddenCats.push(c);
+    renderList(); save();
+  }
   function find(id) { return data.items.filter(function (i) { return i.id === id; })[0]; }
 
   $('restock').addEventListener('click', function () {
     if (!confirm('Remettre TOUS les plats en stock ?')) return;
     data.items.forEach(function (i) { i.available = true; });
+    data.hiddenCats = [];
     renderList(); save();
   });
 
