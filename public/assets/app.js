@@ -196,6 +196,21 @@
   }
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
+  // Photo introuvable : on affiche un cadre propre au lieu d'une image cassée
+  document.addEventListener('error', function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== 'IMG' || img.getAttribute('data-failed')) return;
+    img.setAttribute('data-failed', '1');
+    var letter = esc((img.getAttribute('alt') || '?').charAt(0));
+    if (img.closest('.bc-sheet')) {
+      var d = document.createElement('div'); d.className = 'bc-noimg'; d.textContent = letter.replace(/&[a-z#0-9]+;/g, '?');
+      img.replaceWith(d);
+    } else if (img.parentNode && img.parentNode.className.indexOf('w-24') > -1) {
+      img.parentNode.className += ' flex items-center justify-center text-stone-400 font-serif italic text-sm';
+      img.replaceWith(document.createTextNode((img.getAttribute('alt') || '?').charAt(0)));
+    }
+  }, true);
+
   load().then(function (data) {
     state.data = data;
     render();

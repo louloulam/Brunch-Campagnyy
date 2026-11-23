@@ -37,19 +37,18 @@ function clean(body) {
     bg: HEX.test(body.theme?.bg || "") ? body.theme.bg : "#226677",
     accent: HEX.test(body.theme?.accent || "") ? body.theme.accent : "#226677",
   };
-  return { categories, items, info, theme };
+  return { seedVersion: Math.round(Number(body.seedVersion) || 0), categories, items, info, theme };
 }
 
 export default async (req) => {
   const store = getStore("menu");
 
   if (req.method === "GET") {
+    // Menu d'origine (public/menu.json). Quand son seedVersion change (nouveau menu poussé
+    // sur GitHub), on repart de cette nouvelle version.
+    const seed = await (await fetch(new URL("/menu.json", req.url))).json();
     let data = await store.get("data", { type: "json" });
-    if (!data) {
-      // Première utilisation : on part du menu d'origine (public/menu.json)
-      const seed = await fetch(new URL("/menu.json", req.url));
-      data = await seed.json();
-    }
+    if (!data || (data.seedVersion || 0) !== (seed.seedVersion || 0)) data = seed;
     return json(data);
   }
 
