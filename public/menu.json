@@ -1,1 +1,1367 @@
-{"seedVersion":2,"categories":["COLD DRINKS","MATCHA HOT/COLD","NATURAL JUICE","COCKTAILS","TEA","SAVORY CROISSANTS","BROWNIES","FRUITS","YOGURT BOWL","HOT DRINKS","MOJITOS","MILKSHAKES","DETOX/SMOOTHIES","SAVORY TOASTS","SALADS","TIRAMISU","CHEESE-CAKE","AFFOGATO","SWEET TOAST","CAKES","CLASSICS","SANDWICH","GELATO","SWEET CROISSANTS"],"items":[{"id":"p001","name":"Ice coffee","price":400,"desc":"","tag":"Best Seller","image":"Brunch_Co_Ice_coffee.png","cat":"COLD DRINKS","available":true},{"id":"p002","name":"VANILLA ICED LATTE","price":550,"desc":"","tag":"","image":"Brunch_Co_VANILLA_ICED_LATTE.png","cat":"COLD DRINKS","available":true},{"id":"p003","name":"AMERICANO PEACH CREAM","price":600,"desc":"","tag":"","image":"Brunch_Co_AMERICANO_PEACH_CREAM.png","cat":"COLD DRINKS","available":true},{"id":"p004","name":"TIRAMISU ICED COFFEE","price":650,"desc":"","tag":"","image":"Brunch_Co_TIRAMISU_ICED_COFFEE.png","cat":"COLD DRINKS","available":true},{"id":"p005","name":"ICE LATTE","price":450,"desc":"","tag":"","image":"Brunch_Co_ICE_LATTE.png","cat":"COLD DRINKS","available":true},{"id":"p006","name":"ORANGE ICE AMERICANO","price":450,"desc":"","tag":"","image":"Brunch_Co_ORANGE_ICE_AMERICANO.png","cat":"COLD DRINKS","available":true},{"id":"p007","name":"SPANISH LATTE","price":600,"desc":"","tag":"","image":"Brunch_Co_SPANISH_LATTE.png","cat":"COLD DRINKS","available":true},{"id":"p008","name":"ICE MOCCHA","price":500,"desc":"","tag":"","image":"Brunch_Co_ICE_MOCCHA.png","cat":"COLD DRINKS","available":true},{"id":"p009","name":"ICE MOCCHA STRAWBERRY","price":650,"desc":"","tag":"","image":"Brunch_Co_ICE_MOCCHA_STRAWBERRY.png","cat":"COLD DRINKS","available":true},{"id":"p010","name":"ICE MOCCHA PISTACHIO","price":750,"desc":"","tag":"","image":"Brunch_Co_ICE_MOCCHA_PISTACHIO.png","cat":"COLD DRINKS","available":true},{"id":"p011","name":"ICE CARAMEL LATTE","price":600,"desc":"","tag":"","image":"Brunch_Co_Ice_Caramel_Latte.png","cat":"COLD DRINKS","available":true},{"id":"p012","name":"MATCHA MANGUE","price":650,"desc":"","tag":"","image":"Brunch_Co_MATCHA_MANGUE.png","cat":"MATCHA HOT/COLD","available":true},{"id":"p013","name":"MATCHA CLASSIQUE","price":500,"desc":"","tag":"","image":"Brunch_Co_MATCHA_CLASSIQUE.png","cat":"MATCHA HOT/COLD","available":true},{"id":"p014","name":"MATCHA STRAWBERRY","price":650,"desc":"","tag":"","image":"Brunch_Co_MATCHA_STRAWBERRY.png","cat":"MATCHA HOT/COLD","available":true},{"id":"p015","name":"MATCHA CARAMEL","price":600,"desc":"","tag":"","image":"Brunch_Co_MATCHA_CARAMEL.png","cat":"MATCHA HOT/COLD","available":true},{"id":"p016","name":"JUS DE FRAISE","price":600,"desc":"","tag":"","image":"Brunch_Co_JUS_DE_FRAISE.png","cat":"NATURAL JUICE","available":true},{"id":"p017","name":"JUS DE MANGUE","price":900,"desc":"","tag":"","image":"Brunch_Co_JUS_DE_MANGUE.png","cat":"NATURAL JUICE","available":true},{"id":"p018","name":"COCKTAIL","price":700,"desc":"","tag":"","image":"Brunch_Co_COCKTAIL.png","cat":"NATURAL JUICE","available":true},{"id":"p019","name":"JUS DE BANANE","price":550,"desc":"","tag":"","image":"Brunch_Co_JUS_DE_BANANE.png","cat":"NATURAL JUICE","available":true},{"id":"p020","name":"JUS D'ORANGE","price":400,"desc":"","tag":"","image":"Brunch_Co_JUS_D_ORANGE.png","cat":"NATURAL JUICE","available":true},{"id":"p021","name":"JUS DE CITRON","price":500,"desc":"","tag":"","image":"Brunch_Co_JUS_DE_CITRON.png","cat":"NATURAL JUICE","available":true},{"id":"p022","name":"JUS D'ANANAS","price":650,"desc":"","tag":"","image":"Brunch_Co_JUS_D_ANANAS.png","cat":"NATURAL JUICE","available":true},{"id":"p023","name":"PINK LADY","price":600,"desc":"","tag":"","image":"Brunch_Co_PINK_LADY.png","cat":"COCKTAILS","available":true},{"id":"p024","name":"PINA COLLADA","price":500,"desc":"","tag":"","image":"Brunch_Co_PINA_COLLADA.png","cat":"COCKTAILS","available":true},{"id":"p025","name":"BLUE HAWAII","price":500,"desc":"","tag":"","image":"Brunch_Co_BLUE_HAWAII.png","cat":"COCKTAILS","available":true},{"id":"p026","name":"BORA BORA","price":500,"desc":"","tag":"","image":"Brunch_Co_BORA_BORA.png","cat":"COCKTAILS","available":true},{"id":"p027","name":"ICE TEA","price":400,"desc":"","tag":"","image":"Brunch_Co_ICE_TEA.png","cat":"TEA","available":true},{"id":"p028","name":"LIPTON","price":150,"desc":"","tag":"","image":"Brunch_Co_LIPTON.png","cat":"TEA","available":true},{"id":"p029","name":"MENU THÉ","price":400,"desc":"FUSION/THÉ VERT & FRUITS SECS","tag":"","image":"Brunch_Co_MENU_THE.png","cat":"TEA","available":true},{"id":"p030","name":"THÉ MAISON","price":150,"desc":"","tag":"","image":"Brunch_Co_THE_MAISON.png","cat":"TEA","available":true},{"id":"p031","name":"CROISSANT CREVETTE","price":1100,"desc":"CREVETTE, CRÈME AVOCAT, SALADE, FRUITS","tag":"","image":"Brunch_Co_CROISSANT_CREVETTE.png","cat":"SAVORY CROISSANTS","available":true},{"id":"p032","name":"CROISSANT SMOCKED CHICKEN","price":550,"desc":"POULET FUMÉ,FFROMAGE, SALADE, FRUITS","tag":"","image":"Brunch_Co_CROISSANT_SMOCKED_CHICKEN.png","cat":"SAVORY CROISSANTS","available":true},{"id":"p033","name":"CROISSANT SUNRISE","price":400,"desc":"OEUFS, FROMAGE,SALADE, FRUITS","tag":"Coup de Cœur","image":"Brunch_Co_CROISSANT_SUNRISE.png","cat":"SAVORY CROISSANTS","available":true},{"id":"p034","name":"CROISSANT BRUNCH & CO","price":1600,"desc":"AVOCAT, SAUMON FUMÉ, FROMAGE, LÉGUMES SAUTÉS, SALADE, FRUITS","tag":"","image":"Brunch_Co_CROISSANT_BRUNCH_CO.png","cat":"SAVORY CROISSANTS","available":true},{"id":"p035","name":"CROISSANT CHEESES","price":650,"desc":"CHEDDAR, MOZZARELLA, FROMAGE BLANC, (FROMAGE ROUGE, GRUYÈRE, CAMEMBERT), SALADE, FRUITS","tag":"","image":"Brunch_Co_CROISSANT_CHEESES.png","cat":"SAVORY CROISSANTS","available":true},{"id":"p036","name":"CROISSANT SALMON","price":1200,"desc":"SAUMON FUMÉ, FROMAGE, SALADE, SAUCE PESTO, FRUITS","tag":"","image":"Brunch_Co_CROISSANT_SALMON.png","cat":"SAVORY CROISSANTS","available":true},{"id":"p037","name":"CROISSANT AVOCADO","price":1000,"desc":"AVOCAT, FROMAGE, SALADE, FRUITS","tag":"","image":"Brunch_Co_CROISSANT_AVOCADO.png","cat":"SAVORY CROISSANTS","available":true},{"id":"p038","name":"CARAMEL BEURRE SALÉ","price":450,"desc":"","tag":"","image":"Brunch_Co_CARAMEL_BEURRE_SALE.png","cat":"BROWNIES","available":true},{"id":"p039","name":"CHOCOLAT","price":350,"desc":"","tag":"","image":"Brunch_Co_CHOCOLAT.png","cat":"BROWNIES","available":true},{"id":"p040","name":"SIMPLE","price":300,"desc":"","tag":"","image":"Brunch_Co_SIMPLE.png","cat":"BROWNIES","available":true},{"id":"p041","name":"CHOCOLAT NOIR","price":450,"desc":"","tag":"","image":"Brunch_Co_CHOCOLAT_NOIR.png","cat":"BROWNIES","available":true},{"id":"p042","name":"PISTACHE","price":500,"desc":"","tag":"","image":"Brunch_Co_PISTACHE.png","cat":"BROWNIES","available":true},{"id":"p043","name":"SALADE DE FRUITS","price":400,"desc":"","tag":"","image":"Brunch_Co_SALADE_DE_FRUITS.png","cat":"FRUITS","available":true},{"id":"p044","name":"EXTRA MIX FRUITS","price":1500,"desc":"","tag":"","image":"","cat":"FRUITS","available":true},{"id":"p045","name":"DOUBLE MIX FRUITS","price":1000,"desc":"","tag":"","image":"Brunch_Co_DOUBLE_MIX_FRUITS.png","cat":"FRUITS","available":true},{"id":"p046","name":"SINGLE MIX FRUITS","price":650,"desc":"","tag":"","image":"Brunch_Co_SINGLE_MIX_FRUITS.png","cat":"FRUITS","available":true},{"id":"p047","name":"APPLE CINNAMON","price":700,"desc":"POMME, FLOCON D'AVOINE, CANNELLE, MIEL","tag":"","image":"Brunch_Co_APPLE_CINNAMON.png","cat":"YOGURT BOWL","available":true},{"id":"p048","name":"CLASSIC","price":650,"desc":"FRAISE, GRANOLA, DATTES","tag":"","image":"","cat":"YOGURT BOWL","available":true},{"id":"p049","name":"SUNRISE","price":800,"desc":"BANANE, MANGUE, NOIX","tag":"","image":"Brunch_Co_SUNRISE.png","cat":"YOGURT BOWL","available":true},{"id":"p050","name":"CHOCOLAT CHAUD","price":300,"desc":"","tag":"","image":"Brunch_Co_CHOCOLAT_CHAUD.png","cat":"HOT DRINKS","available":true},{"id":"p051","name":"LAIT","price":100,"desc":"","tag":"","image":"Brunch_Co_LAIT.png","cat":"HOT DRINKS","available":true},{"id":"p052","name":"LAVAZZA","price":300,"desc":"","tag":"","image":"Brunch_Co_LAVAZZA.png","cat":"HOT DRINKS","available":true},{"id":"p053","name":"CAFFE LATTE","price":400,"desc":"","tag":"","image":"Brunch_Co_CAFFE_LATTE.png","cat":"HOT DRINKS","available":true},{"id":"p054","name":"CAPS","price":150,"desc":"","tag":"","image":"Brunch_Co_CAPS.png","cat":"HOT DRINKS","available":true},{"id":"p055","name":"ESPRESSO A EMPORTER","price":50,"desc":"","tag":"","image":"Brunch_Co_ESPRESSO_A_EMPORTER.png","cat":"HOT DRINKS","available":true},{"id":"p056","name":"L'OR","price":200,"desc":"","tag":"","image":"Brunch_Co_L_OR.png","cat":"HOT DRINKS","available":true},{"id":"p057","name":"DOLCE GUSTO (NESCAE)","price":300,"desc":"","tag":"","image":"Brunch_Co_DOLCE_GUSTO_NESCAE.png","cat":"HOT DRINKS","available":true},{"id":"p058","name":"DOUBLE ESPRESSO","price":200,"desc":"","tag":"","image":"Brunch_Co_DOUBLE_ESPRESSO.png","cat":"HOT DRINKS","available":true},{"id":"p059","name":"ESPRESSO","price":100,"desc":"","tag":"","image":"Brunch_Co_ESPRESSO.png","cat":"HOT DRINKS","available":true},{"id":"p060","name":"CAPPUCCINO CLASSIC","price":400,"desc":"","tag":"","image":"Brunch_Co_CAPPUCCINO_CLASSIC.png","cat":"HOT DRINKS","available":true},{"id":"p061","name":"CAFÉ AU LAIT","price":150,"desc":"","tag":"","image":"","cat":"HOT DRINKS","available":true},{"id":"p062","name":"CARTE NOIR","price":300,"desc":"","tag":"","image":"Brunch_Co_CARTE_NOIR.png","cat":"HOT DRINKS","available":true},{"id":"p063","name":"RED MOJITO","price":500,"desc":"","tag":"","image":"Brunch_Co_RED_MOJITO.png","cat":"MOJITOS","available":true},{"id":"p064","name":"BLUE MOJITO","price":500,"desc":"","tag":"","image":"Brunch_Co_BLUE_MOJITO.png","cat":"MOJITOS","available":true},{"id":"p065","name":"MOJITO JUICE","price":500,"desc":"","tag":"","image":"Brunch_Co_MOJITO_JUICE.png","cat":"MOJITOS","available":true},{"id":"p066","name":"CLASSIC","price":400,"desc":"","tag":"","image":"Brunch_Co_CLASSIC.png","cat":"MOJITOS","available":true},{"id":"p067","name":"CREAMY MOJITO","price":600,"desc":"","tag":"","image":"Brunch_Co_CREAMY_MOJITO.png","cat":"MOJITOS","available":true},{"id":"p068","name":"NUTELLA","price":750,"desc":"","tag":"","image":"Brunch_Co_NUTELLA.png","cat":"MILKSHAKES","available":true},{"id":"p069","name":"STRAWBERRY","price":650,"desc":"","tag":"","image":"Brunch_Co_STRAWBERRY.png","cat":"MILKSHAKES","available":true},{"id":"p070","name":"LOTUS","price":750,"desc":"","tag":"","image":"Brunch_Co_LOTUS.png","cat":"MILKSHAKES","available":true},{"id":"p071","name":"BANANE","price":500,"desc":"","tag":"","image":"Brunch_Co_BANANE.png","cat":"MILKSHAKES","available":true},{"id":"p072","name":"CHOCOLAT","price":600,"desc":"","tag":"","image":"","cat":"MILKSHAKES","available":true},{"id":"p073","name":"HONEY SMOOTHIE","price":750,"desc":"BANANE, NOIX, MIEL, LAIT","tag":"","image":"Brunch_Co_HONEY_SMOOTHIE.png","cat":"DETOX/SMOOTHIES","available":true},{"id":"p074","name":"POWER SMOOTHIE","price":650,"desc":"DATTE, BANANE, CACAO, NOIX, LAIT","tag":"","image":"Brunch_Co_POWER_SMOOTHIE.png","cat":"DETOX/SMOOTHIES","available":true},{"id":"p075","name":"GINGER DETOX","price":500,"desc":"CAROTTE, ORANGE,GINGEMBRE, CURCUMA","tag":"","image":"Brunch_Co_GINGER_DETOX.png","cat":"DETOX/SMOOTHIES","available":true},{"id":"p076","name":"EASY DETOX","price":600,"desc":"BETTRAVE, CAROTTE, CITRON, CONCOMBRE","tag":"","image":"Brunch_Co_EASY_DETOX.png","cat":"DETOX/SMOOTHIES","available":true},{"id":"p077","name":"GLOW DETOX","price":600,"desc":"CAROTTE, POMME, ORANGE, GINGEMBRE","tag":"","image":"Brunch_Co_GLOW_DETOX.png","cat":"DETOX/SMOOTHIES","available":true},{"id":"p078","name":"GREEN DETOX","price":550,"desc":"CELERI, CONCOMBRE, CITRON, GINGEMBRE","tag":"","image":"Brunch_Co_GREEN_DETOX.png","cat":"DETOX/SMOOTHIES","available":true},{"id":"p079","name":"MUSHROOM TOAST","price":750,"desc":"Champignons, Fromage, Salade, Fruits","tag":"","image":"Brunch_Co_MUSHROOM_TOAST.png","cat":"SAVORY TOASTS","available":true},{"id":"p080","name":"EGGPLANT TOAST","price":650,"desc":"Aubergine, Viande hachée, Cheddar, Salade, Fruits","tag":"","image":"Brunch_Co_EGGPLANT_TOAST.png","cat":"SAVORY TOASTS","available":true},{"id":"p081","name":"MORNING TOAST","price":350,"desc":"Œuf, Fromage blanc, Salade, Fruits","tag":"","image":"","cat":"SAVORY TOASTS","available":true},{"id":"p082","name":"TUNA TOAST","price":450,"desc":"Thon, Fromage, Salade, Fruits","tag":"","image":"Brunch_Co_TUNA_TOAST.png","cat":"SAVORY TOASTS","available":true},{"id":"p083","name":"CREVETTE TOAST","price":1300,"desc":"Crevette, Crème avocat, Salade, Fruits","tag":"","image":"Brunch_Co_CREVETTE_TOAST.png","cat":"SAVORY TOASTS","available":true},{"id":"p084","name":"SALMON TOAST","price":1400,"desc":"Saumon Fumé, Fromage, Salade, Sauce pesto, Fruits","tag":"","image":"Brunch_Co_SALMON_TOAST.png","cat":"SAVORY TOASTS","available":true},{"id":"p085","name":"SPINACH TOAST","price":700,"desc":"Épinards à la crème , Poulet, Fromage, Salade, Fruits","tag":"","image":"Brunch_Co_SPINACH_TOAST.png","cat":"SAVORY TOASTS","available":true},{"id":"p086","name":"TOMATO TOAST","price":650,"desc":"Tomate cerise, Sauce Pesto, Fromage, Salade, Fruits","tag":"","image":"Brunch_Co_TOMATO_TOAST.png","cat":"SAVORY TOASTS","available":true},{"id":"p087","name":"AVOCADO TOAST","price":1100,"desc":"Avocat, Fromage, Salade, Fruits","tag":"","image":"Brunch_Co_AVOCADO_TOAST.png","cat":"SAVORY TOASTS","available":true},{"id":"p088","name":"CHEESES TOAST","price":650,"desc":"Cheddar, Mozzarella, Fromage blanc, (Fromage rouge/Gruyère/Camembert), Salade, Fruits","tag":"","image":"","cat":"SAVORY TOASTS","available":true},{"id":"p089","name":"GREEK","price":400,"desc":"SALADE VERTE, TOMATE, POIVRON, CONCOMBRE, OIGNON, OLIVE, FROMAGE","tag":"","image":"Brunch_Co_GREEK.png","cat":"SALADS","available":true},{"id":"p090","name":"NIÇOISE","price":500,"desc":"SALADE VERTE, THON, TOMATE, POMME DE TERRE, OLIVE, MAIS, OEUFS","tag":"","image":"Brunch_Co_NICOISE.png","cat":"SALADS","available":true},{"id":"p091","name":"CÉSAR","price":450,"desc":"SALADE VERTE, CROUTON, POULET,OEUF, CHEDDAR, CRÈME CÉSAR","tag":"Populaire","image":"Brunch_Co_CESAR.png","cat":"SALADS","available":true},{"id":"p092","name":"SALMON","price":850,"desc":"SALADE VERTE, SAUMON FUMÉ, AVOCAT, OEUFS, OIGNON, PISTACHE, SAUCE SOJA","tag":"","image":"Brunch_Co_SALMON.png","cat":"SALADS","available":true},{"id":"p093","name":"TIRAMISU PISTACHE","price":650,"desc":"","tag":"","image":"","cat":"TIRAMISU","available":true},{"id":"p094","name":"TIRAMISU FRUIT","price":497,"desc":"","tag":"","image":"","cat":"TIRAMISU","available":true},{"id":"p095","name":"TIRAMISU BUENO","price":650,"desc":"","tag":"","image":"","cat":"TIRAMISU","available":true},{"id":"p096","name":"SIMPLE","price":450,"desc":"","tag":"","image":"","cat":"TIRAMISU","available":true},{"id":"p097","name":"TIRAMISU LOTUS","price":650,"desc":"","tag":"","image":"","cat":"TIRAMISU","available":true},{"id":"p098","name":"AU CHOCOLAT","price":500,"desc":"","tag":"","image":"","cat":"TIRAMISU","available":true},{"id":"p099","name":"CHEESECAKE BUENO","price":650,"desc":"","tag":"","image":"","cat":"CHEESE-CAKE","available":true},{"id":"p100","name":"CHOCOLAT","price":500,"desc":"","tag":"","image":"","cat":"CHEESE-CAKE","available":true},{"id":"p101","name":"CHEESECAKE FERRERO","price":650,"desc":"","tag":"","image":"Brunch_Co_CHEESECAKE_FERRERO.png","cat":"CHEESE-CAKE","available":true},{"id":"p102","name":"CHEESECAKE PISTACHE","price":700,"desc":"","tag":"","image":"Brunch_Co_CHEESECAKE_PISTACHE.png","cat":"CHEESE-CAKE","available":true},{"id":"p103","name":"CHEESECAKE MANGUE","price":600,"desc":"","tag":"","image":"Brunch_Co_CHEESECAKE_MANGUE.png","cat":"CHEESE-CAKE","available":true},{"id":"p104","name":"CHEESECAKE FRAISE","price":550,"desc":"","tag":"","image":"Brunch_Co_CHEESECAKE_FRAISE.png","cat":"CHEESE-CAKE","available":true},{"id":"p105","name":"CHEESECAKE LOTUS","price":700,"desc":"","tag":"","image":"Brunch_Co_CHEESECAKE_LOTUS.png","cat":"CHEESE-CAKE","available":true},{"id":"p106","name":"CARAMEL BEURRE SALÉ","price":600,"desc":"","tag":"","image":"","cat":"AFFOGATO","available":true},{"id":"p107","name":"PISTACHE","price":700,"desc":"","tag":"","image":"","cat":"AFFOGATO","available":true},{"id":"p108","name":"CHOCOLAT","price":500,"desc":"","tag":"","image":"","cat":"AFFOGATO","available":true},{"id":"p109","name":"VANILLE","price":500,"desc":"","tag":"","image":"","cat":"AFFOGATO","available":true},{"id":"p110","name":"TOAST CHOCOLAT","price":350,"desc":"","tag":"","image":"","cat":"SWEET TOAST","available":true},{"id":"p111","name":"TOAST BANANE","price":400,"desc":"","tag":"","image":"","cat":"SWEET TOAST","available":true},{"id":"p112","name":"TOAST NUTELLA","price":550,"desc":"","tag":"","image":"","cat":"SWEET TOAST","available":true},{"id":"p113","name":"TARTE AUX POMMES","price":400,"desc":"","tag":"","image":"","cat":"CAKES","available":true},{"id":"p114","name":"ENERGY CAKE","price":400,"desc":"","tag":"","image":"","cat":"CAKES","available":true},{"id":"p115","name":"HEALTHY CAKE","price":350,"desc":"","tag":"","image":"","cat":"CAKES","available":true},{"id":"p116","name":"TROMPE L'OEIL","price":600,"desc":"","tag":"","image":"Brunch_Co_TROMPE_L_OEIL.png","cat":"CAKES","available":true},{"id":"p117","name":"SALMON BRUNCH","price":1500,"desc":"Pain grillé, Saumon fumé, Sauce Pesto, Salade, Tomate, Concombre, Persil, Noix, Confiture, Fruits","tag":"","image":"Brunch_Co_SALMON_BRUNCH.png","cat":"CLASSICS","available":true},{"id":"p118","name":"BRUNCH & CO","price":1800,"desc":"Pain grillé, Fromage, Avocat, Saumon fumé, Salade, Tomate, Concombre, Persil, Noix, Confiture, Fruits","tag":"","image":"Brunch_Co_BRUNCH_CO.png","cat":"CLASSICS","available":true},{"id":"p119","name":"AVOCADO BRUNCH","price":1200,"desc":"Pain grillé, Avocat, Salade, Mais, Tomate, Concombre, Persil, Noix, Confiture, Fruits","tag":"","image":"Brunch_Co_AVOCADO_BRUNCH.png","cat":"CLASSICS","available":true},{"id":"p120","name":"CLASSIC BRUNCH","price":600,"desc":"Pain grillé, Œuf, Salade, Tomate, Concombre, Persil, Noix, Confiture, Fruits","tag":"","image":"Brunch_Co_CLASSIC_BRUNCH.png","cat":"CLASSICS","available":true},{"id":"p121","name":"CHEESES BRUNCH","price":650,"desc":"Pain grillé, 3 Fromages, Salade, Tomate, Concombre, Persil, Noix, Confiture, Fruits","tag":"","image":"Brunch_Co_CHEESES_BRUNCH.png","cat":"CLASSICS","available":true},{"id":"p122","name":"MUSHROOM BRUNCH","price":800,"desc":"Pain grillé, Champignons, Salade, Tomate, Concombre, Persil, Epinards, Noix, Confiture, Fruits","tag":"","image":"Brunch_Co_MUSHROOM_BRUNCH.png","cat":"CLASSICS","available":true},{"id":"p123","name":"SMOKED CHIKEN","price":550,"desc":"Poulet Fumé, Oignon caramélisé, Salade","tag":"","image":"","cat":"SANDWICH","available":true},{"id":"p124","name":"THON","price":450,"desc":"Thon, Fromage, Salade","tag":"","image":"","cat":"SANDWICH","available":true},{"id":"p125","name":"CHEESES","price":650,"desc":"Cheddar, Mozzarella, Fromage blanc, (Fromage rouge/Gruyère), Salade","tag":"","image":"","cat":"SANDWICH","available":true},{"id":"p126","name":"BRUNCH & CO","price":850,"desc":"Poulet Fumé, Sauce Pesto, 3 Fromages, Salade, Fruits","tag":"","image":"","cat":"SANDWICH","available":true},{"id":"p127","name":"01 BOULE","price":300,"desc":"","tag":"","image":"","cat":"GELATO","available":true},{"id":"p128","name":"CROISSANT MANGUE","price":650,"desc":"","tag":"","image":"","cat":"SWEET CROISSANTS","available":true},{"id":"p129","name":"CROISSANT PISTACHE","price":700,"desc":"","tag":"","image":"Brunch_Co_CROISSANT_PISTACHE.png","cat":"SWEET CROISSANTS","available":true},{"id":"p130","name":"CROISSANT SIMPLE","price":100,"desc":"","tag":"","image":"Brunch_Co_CROISSANT_SIMPLE.png","cat":"SWEET CROISSANTS","available":true},{"id":"p131","name":"CROISSANT BANANE","price":500,"desc":"","tag":"","image":"Brunch_Co_CROISSANT_BANANE.png","cat":"SWEET CROISSANTS","available":true},{"id":"p132","name":"CROISSANT CHOCOLAT","price":400,"desc":"","tag":"","image":"Brunch_Co_CROISSANT_CHOCOLAT.png","cat":"SWEET CROISSANTS","available":true}],"info":{"name":"Brunch & Co","tagline":"Healthy food • Brunch & Drinks\nBrunch & Company - Là où les saveurs se rencontrent.","address":"Rue Said Ouzeffoune, Tizi Ouzou","phone":"0552841547","email":"louizyousfi@gmail.com","hours":"Lundi au Jeudi : 8h00 – 22h00 • Vendredi : Fermé • Samedi : 8h30 – 22h00 • Dimanche : 8h00 – 22h00","instagram":"https://www.instagram.com/brunch__company?exln=cGVkNWxybXRyMHp1&utm_source=qr","facebook":"https://www.facebook.com/share/19wGR1ZLuY/?mibextid=wwXIfr%20E","note":"Wi-Fi disponible • Espace calme et confortable pour travailler."},"theme":{"bg":"#226677","accent":"#226677"}}
+{
+  "seedVersion": 2,
+  "categories": [
+    "COLD DRINKS",
+    "MATCHA HOT/COLD",
+    "NATURAL JUICE",
+    "COCKTAILS",
+    "TEA",
+    "SAVORY CROISSANTS",
+    "BROWNIES",
+    "FRUITS",
+    "YOGURT BOWL",
+    "HOT DRINKS",
+    "MOJITOS",
+    "MILKSHAKES",
+    "DETOX/SMOOTHIES",
+    "SAVORY TOASTS",
+    "SALADS",
+    "TIRAMISU",
+    "CHEESE-CAKE",
+    "AFFOGATO",
+    "SWEET TOAST",
+    "CAKES",
+    "CLASSICS",
+    "SANDWICH",
+    "GELATO",
+    "SWEET CROISSANTS"
+  ],
+  "hiddenCats": [],
+  "items": [
+    {
+      "id": "p001",
+      "name": "Ice coffee",
+      "price": 400,
+      "desc": "",
+      "tag": "Best Seller",
+      "image": "Brunch_Co_Ice_coffee.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p002",
+      "name": "VANILLA ICED LATTE",
+      "price": 550,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_VANILLA_ICED_LATTE.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p003",
+      "name": "AMERICANO PEACH CREAM",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_AMERICANO_PEACH_CREAM.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p004",
+      "name": "TIRAMISU ICED COFFEE",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_TIRAMISU_ICED_COFFEE.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p005",
+      "name": "ICE LATTE",
+      "price": 450,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_ICE_LATTE.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p006",
+      "name": "ORANGE ICE AMERICANO",
+      "price": 450,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_ORANGE_ICE_AMERICANO.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p007",
+      "name": "SPANISH LATTE",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_SPANISH_LATTE.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p008",
+      "name": "ICE MOCCHA",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_ICE_MOCCHA.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p009",
+      "name": "ICE MOCCHA STRAWBERRY",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_ICE_MOCCHA_STRAWBERRY.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p010",
+      "name": "ICE MOCCHA PISTACHIO",
+      "price": 750,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_ICE_MOCCHA_PISTACHIO.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p011",
+      "name": "ICE CARAMEL LATTE",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_Ice_Caramel_Latte.png",
+      "cat": "COLD DRINKS",
+      "available": true
+    },
+    {
+      "id": "p012",
+      "name": "MATCHA MANGUE",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_MATCHA_MANGUE.png",
+      "cat": "MATCHA HOT/COLD",
+      "available": true
+    },
+    {
+      "id": "p013",
+      "name": "MATCHA CLASSIQUE",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_MATCHA_CLASSIQUE.png",
+      "cat": "MATCHA HOT/COLD",
+      "available": true
+    },
+    {
+      "id": "p014",
+      "name": "MATCHA STRAWBERRY",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_MATCHA_STRAWBERRY.png",
+      "cat": "MATCHA HOT/COLD",
+      "available": true
+    },
+    {
+      "id": "p015",
+      "name": "MATCHA CARAMEL",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_MATCHA_CARAMEL.png",
+      "cat": "MATCHA HOT/COLD",
+      "available": true
+    },
+    {
+      "id": "p016",
+      "name": "JUS DE FRAISE",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_JUS_DE_FRAISE.png",
+      "cat": "NATURAL JUICE",
+      "available": true
+    },
+    {
+      "id": "p017",
+      "name": "JUS DE MANGUE",
+      "price": 900,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_JUS_DE_MANGUE.png",
+      "cat": "NATURAL JUICE",
+      "available": true
+    },
+    {
+      "id": "p018",
+      "name": "COCKTAIL",
+      "price": 700,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_COCKTAIL.png",
+      "cat": "NATURAL JUICE",
+      "available": true
+    },
+    {
+      "id": "p019",
+      "name": "JUS DE BANANE",
+      "price": 550,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_JUS_DE_BANANE.png",
+      "cat": "NATURAL JUICE",
+      "available": true
+    },
+    {
+      "id": "p020",
+      "name": "JUS D'ORANGE",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_JUS_D_ORANGE.png",
+      "cat": "NATURAL JUICE",
+      "available": true
+    },
+    {
+      "id": "p021",
+      "name": "JUS DE CITRON",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_JUS_DE_CITRON.png",
+      "cat": "NATURAL JUICE",
+      "available": true
+    },
+    {
+      "id": "p022",
+      "name": "JUS D'ANANAS",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_JUS_D_ANANAS.png",
+      "cat": "NATURAL JUICE",
+      "available": true
+    },
+    {
+      "id": "p023",
+      "name": "PINK LADY",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_PINK_LADY.png",
+      "cat": "COCKTAILS",
+      "available": true
+    },
+    {
+      "id": "p024",
+      "name": "PINA COLLADA",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_PINA_COLLADA.png",
+      "cat": "COCKTAILS",
+      "available": true
+    },
+    {
+      "id": "p025",
+      "name": "BLUE HAWAII",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_BLUE_HAWAII.png",
+      "cat": "COCKTAILS",
+      "available": true
+    },
+    {
+      "id": "p026",
+      "name": "BORA BORA",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_BORA_BORA.png",
+      "cat": "COCKTAILS",
+      "available": true
+    },
+    {
+      "id": "p027",
+      "name": "ICE TEA",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_ICE_TEA.png",
+      "cat": "TEA",
+      "available": true
+    },
+    {
+      "id": "p028",
+      "name": "LIPTON",
+      "price": 150,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_LIPTON.png",
+      "cat": "TEA",
+      "available": true
+    },
+    {
+      "id": "p029",
+      "name": "MENU THÉ",
+      "price": 400,
+      "desc": "FUSION/THÉ VERT & FRUITS SECS",
+      "tag": "",
+      "image": "Brunch_Co_MENU_THE.png",
+      "cat": "TEA",
+      "available": true
+    },
+    {
+      "id": "p030",
+      "name": "THÉ MAISON",
+      "price": 150,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_THE_MAISON.png",
+      "cat": "TEA",
+      "available": true
+    },
+    {
+      "id": "p031",
+      "name": "CROISSANT CREVETTE",
+      "price": 1100,
+      "desc": "CREVETTE, CRÈME AVOCAT, SALADE, FRUITS",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_CREVETTE.png",
+      "cat": "SAVORY CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p032",
+      "name": "CROISSANT SMOCKED CHICKEN",
+      "price": 550,
+      "desc": "POULET FUMÉ,FFROMAGE, SALADE, FRUITS",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_SMOCKED_CHICKEN.png",
+      "cat": "SAVORY CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p033",
+      "name": "CROISSANT SUNRISE",
+      "price": 400,
+      "desc": "OEUFS, FROMAGE,SALADE, FRUITS",
+      "tag": "Coup de Cœur",
+      "image": "Brunch_Co_CROISSANT_SUNRISE.png",
+      "cat": "SAVORY CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p034",
+      "name": "CROISSANT BRUNCH & CO",
+      "price": 1600,
+      "desc": "AVOCAT, SAUMON FUMÉ, FROMAGE, LÉGUMES SAUTÉS, SALADE, FRUITS",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_BRUNCH_CO.png",
+      "cat": "SAVORY CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p035",
+      "name": "CROISSANT CHEESES",
+      "price": 650,
+      "desc": "CHEDDAR, MOZZARELLA, FROMAGE BLANC, (FROMAGE ROUGE, GRUYÈRE, CAMEMBERT), SALADE, FRUITS",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_CHEESES.png",
+      "cat": "SAVORY CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p036",
+      "name": "CROISSANT SALMON",
+      "price": 1200,
+      "desc": "SAUMON FUMÉ, FROMAGE, SALADE, SAUCE PESTO, FRUITS",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_SALMON.png",
+      "cat": "SAVORY CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p037",
+      "name": "CROISSANT AVOCADO",
+      "price": 1000,
+      "desc": "AVOCAT, FROMAGE, SALADE, FRUITS",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_AVOCADO.png",
+      "cat": "SAVORY CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p038",
+      "name": "CARAMEL BEURRE SALÉ",
+      "price": 450,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CARAMEL_BEURRE_SALE.png",
+      "cat": "BROWNIES",
+      "available": true
+    },
+    {
+      "id": "p039",
+      "name": "CHOCOLAT",
+      "price": 350,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CHOCOLAT.png",
+      "cat": "BROWNIES",
+      "available": true
+    },
+    {
+      "id": "p040",
+      "name": "SIMPLE",
+      "price": 300,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_SIMPLE.png",
+      "cat": "BROWNIES",
+      "available": true
+    },
+    {
+      "id": "p041",
+      "name": "CHOCOLAT NOIR",
+      "price": 450,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CHOCOLAT_NOIR.png",
+      "cat": "BROWNIES",
+      "available": true
+    },
+    {
+      "id": "p042",
+      "name": "PISTACHE",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_PISTACHE.png",
+      "cat": "BROWNIES",
+      "available": true
+    },
+    {
+      "id": "p043",
+      "name": "SALADE DE FRUITS",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_SALADE_DE_FRUITS.png",
+      "cat": "FRUITS",
+      "available": true
+    },
+    {
+      "id": "p044",
+      "name": "EXTRA MIX FRUITS",
+      "price": 1500,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "FRUITS",
+      "available": true
+    },
+    {
+      "id": "p045",
+      "name": "DOUBLE MIX FRUITS",
+      "price": 1000,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_DOUBLE_MIX_FRUITS.png",
+      "cat": "FRUITS",
+      "available": true
+    },
+    {
+      "id": "p046",
+      "name": "SINGLE MIX FRUITS",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_SINGLE_MIX_FRUITS.png",
+      "cat": "FRUITS",
+      "available": true
+    },
+    {
+      "id": "p047",
+      "name": "APPLE CINNAMON",
+      "price": 700,
+      "desc": "POMME, FLOCON D'AVOINE, CANNELLE, MIEL",
+      "tag": "",
+      "image": "Brunch_Co_APPLE_CINNAMON.png",
+      "cat": "YOGURT BOWL",
+      "available": true
+    },
+    {
+      "id": "p048",
+      "name": "CLASSIC",
+      "price": 650,
+      "desc": "FRAISE, GRANOLA, DATTES",
+      "tag": "",
+      "image": "",
+      "cat": "YOGURT BOWL",
+      "available": true
+    },
+    {
+      "id": "p049",
+      "name": "SUNRISE",
+      "price": 800,
+      "desc": "BANANE, MANGUE, NOIX",
+      "tag": "",
+      "image": "Brunch_Co_SUNRISE.png",
+      "cat": "YOGURT BOWL",
+      "available": true
+    },
+    {
+      "id": "p050",
+      "name": "CHOCOLAT CHAUD",
+      "price": 300,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CHOCOLAT_CHAUD.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p051",
+      "name": "LAIT",
+      "price": 100,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_LAIT.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p052",
+      "name": "LAVAZZA",
+      "price": 300,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_LAVAZZA.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p053",
+      "name": "CAFFE LATTE",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CAFFE_LATTE.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p054",
+      "name": "CAPS",
+      "price": 150,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CAPS.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p055",
+      "name": "ESPRESSO A EMPORTER",
+      "price": 50,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_ESPRESSO_A_EMPORTER.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p056",
+      "name": "L'OR",
+      "price": 200,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_L_OR.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p057",
+      "name": "DOLCE GUSTO (NESCAE)",
+      "price": 300,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_DOLCE_GUSTO_NESCAE.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p058",
+      "name": "DOUBLE ESPRESSO",
+      "price": 200,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_DOUBLE_ESPRESSO.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p059",
+      "name": "ESPRESSO",
+      "price": 100,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_ESPRESSO.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p060",
+      "name": "CAPPUCCINO CLASSIC",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CAPPUCCINO_CLASSIC.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p061",
+      "name": "CAFÉ AU LAIT",
+      "price": 150,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p062",
+      "name": "CARTE NOIR",
+      "price": 300,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CARTE_NOIR.png",
+      "cat": "HOT DRINKS",
+      "available": true
+    },
+    {
+      "id": "p063",
+      "name": "RED MOJITO",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_RED_MOJITO.png",
+      "cat": "MOJITOS",
+      "available": true
+    },
+    {
+      "id": "p064",
+      "name": "BLUE MOJITO",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_BLUE_MOJITO.png",
+      "cat": "MOJITOS",
+      "available": true
+    },
+    {
+      "id": "p065",
+      "name": "MOJITO JUICE",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_MOJITO_JUICE.png",
+      "cat": "MOJITOS",
+      "available": true
+    },
+    {
+      "id": "p066",
+      "name": "CLASSIC",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CLASSIC.png",
+      "cat": "MOJITOS",
+      "available": true
+    },
+    {
+      "id": "p067",
+      "name": "CREAMY MOJITO",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CREAMY_MOJITO.png",
+      "cat": "MOJITOS",
+      "available": true
+    },
+    {
+      "id": "p068",
+      "name": "NUTELLA",
+      "price": 750,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_NUTELLA.png",
+      "cat": "MILKSHAKES",
+      "available": true
+    },
+    {
+      "id": "p069",
+      "name": "STRAWBERRY",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_STRAWBERRY.png",
+      "cat": "MILKSHAKES",
+      "available": true
+    },
+    {
+      "id": "p070",
+      "name": "LOTUS",
+      "price": 750,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_LOTUS.png",
+      "cat": "MILKSHAKES",
+      "available": true
+    },
+    {
+      "id": "p071",
+      "name": "BANANE",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_BANANE.png",
+      "cat": "MILKSHAKES",
+      "available": true
+    },
+    {
+      "id": "p072",
+      "name": "CHOCOLAT",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "MILKSHAKES",
+      "available": true
+    },
+    {
+      "id": "p073",
+      "name": "HONEY SMOOTHIE",
+      "price": 750,
+      "desc": "BANANE, NOIX, MIEL, LAIT",
+      "tag": "",
+      "image": "Brunch_Co_HONEY_SMOOTHIE.png",
+      "cat": "DETOX/SMOOTHIES",
+      "available": true
+    },
+    {
+      "id": "p074",
+      "name": "POWER SMOOTHIE",
+      "price": 650,
+      "desc": "DATTE, BANANE, CACAO, NOIX, LAIT",
+      "tag": "",
+      "image": "Brunch_Co_POWER_SMOOTHIE.png",
+      "cat": "DETOX/SMOOTHIES",
+      "available": true
+    },
+    {
+      "id": "p075",
+      "name": "GINGER DETOX",
+      "price": 500,
+      "desc": "CAROTTE, ORANGE,GINGEMBRE, CURCUMA",
+      "tag": "",
+      "image": "Brunch_Co_GINGER_DETOX.png",
+      "cat": "DETOX/SMOOTHIES",
+      "available": true
+    },
+    {
+      "id": "p076",
+      "name": "EASY DETOX",
+      "price": 600,
+      "desc": "BETTRAVE, CAROTTE, CITRON, CONCOMBRE",
+      "tag": "",
+      "image": "Brunch_Co_EASY_DETOX.png",
+      "cat": "DETOX/SMOOTHIES",
+      "available": true
+    },
+    {
+      "id": "p077",
+      "name": "GLOW DETOX",
+      "price": 600,
+      "desc": "CAROTTE, POMME, ORANGE, GINGEMBRE",
+      "tag": "",
+      "image": "Brunch_Co_GLOW_DETOX.png",
+      "cat": "DETOX/SMOOTHIES",
+      "available": true
+    },
+    {
+      "id": "p078",
+      "name": "GREEN DETOX",
+      "price": 550,
+      "desc": "CELERI, CONCOMBRE, CITRON, GINGEMBRE",
+      "tag": "",
+      "image": "Brunch_Co_GREEN_DETOX.png",
+      "cat": "DETOX/SMOOTHIES",
+      "available": true
+    },
+    {
+      "id": "p079",
+      "name": "MUSHROOM TOAST",
+      "price": 750,
+      "desc": "Champignons, Fromage, Salade, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_MUSHROOM_TOAST.png",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p080",
+      "name": "EGGPLANT TOAST",
+      "price": 650,
+      "desc": "Aubergine, Viande hachée, Cheddar, Salade, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_EGGPLANT_TOAST.png",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p081",
+      "name": "MORNING TOAST",
+      "price": 350,
+      "desc": "Œuf, Fromage blanc, Salade, Fruits",
+      "tag": "",
+      "image": "",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p082",
+      "name": "TUNA TOAST",
+      "price": 450,
+      "desc": "Thon, Fromage, Salade, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_TUNA_TOAST.png",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p083",
+      "name": "CREVETTE TOAST",
+      "price": 1300,
+      "desc": "Crevette, Crème avocat, Salade, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_CREVETTE_TOAST.png",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p084",
+      "name": "SALMON TOAST",
+      "price": 1400,
+      "desc": "Saumon Fumé, Fromage, Salade, Sauce pesto, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_SALMON_TOAST.png",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p085",
+      "name": "SPINACH TOAST",
+      "price": 700,
+      "desc": "Épinards à la crème , Poulet, Fromage, Salade, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_SPINACH_TOAST.png",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p086",
+      "name": "TOMATO TOAST",
+      "price": 650,
+      "desc": "Tomate cerise, Sauce Pesto, Fromage, Salade, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_TOMATO_TOAST.png",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p087",
+      "name": "AVOCADO TOAST",
+      "price": 1100,
+      "desc": "Avocat, Fromage, Salade, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_AVOCADO_TOAST.png",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p088",
+      "name": "CHEESES TOAST",
+      "price": 650,
+      "desc": "Cheddar, Mozzarella, Fromage blanc, (Fromage rouge/Gruyère/Camembert), Salade, Fruits",
+      "tag": "",
+      "image": "/api/image/3e733b68-2f50-4049-acc9-f453e5dc101c",
+      "cat": "SAVORY TOASTS",
+      "available": true
+    },
+    {
+      "id": "p089",
+      "name": "GREEK",
+      "price": 400,
+      "desc": "SALADE VERTE, TOMATE, POIVRON, CONCOMBRE, OIGNON, OLIVE, FROMAGE",
+      "tag": "",
+      "image": "Brunch_Co_GREEK.png",
+      "cat": "SALADS",
+      "available": true
+    },
+    {
+      "id": "p090",
+      "name": "NIÇOISE",
+      "price": 500,
+      "desc": "SALADE VERTE, THON, TOMATE, POMME DE TERRE, OLIVE, MAIS, OEUFS",
+      "tag": "",
+      "image": "Brunch_Co_NICOISE.png",
+      "cat": "SALADS",
+      "available": true
+    },
+    {
+      "id": "p091",
+      "name": "CÉSAR",
+      "price": 450,
+      "desc": "SALADE VERTE, CROUTON, POULET,OEUF, CHEDDAR, CRÈME CÉSAR",
+      "tag": "Populaire",
+      "image": "Brunch_Co_CESAR.png",
+      "cat": "SALADS",
+      "available": true
+    },
+    {
+      "id": "p092",
+      "name": "SALMON",
+      "price": 850,
+      "desc": "SALADE VERTE, SAUMON FUMÉ, AVOCAT, OEUFS, OIGNON, PISTACHE, SAUCE SOJA",
+      "tag": "",
+      "image": "Brunch_Co_SALMON.png",
+      "cat": "SALADS",
+      "available": true
+    },
+    {
+      "id": "p093",
+      "name": "TIRAMISU PISTACHE",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "TIRAMISU",
+      "available": true
+    },
+    {
+      "id": "p094",
+      "name": "TIRAMISU FRUIT",
+      "price": 497,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "TIRAMISU",
+      "available": true
+    },
+    {
+      "id": "p095",
+      "name": "TIRAMISU BUENO",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "TIRAMISU",
+      "available": true
+    },
+    {
+      "id": "p096",
+      "name": "SIMPLE",
+      "price": 450,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "TIRAMISU",
+      "available": true
+    },
+    {
+      "id": "p097",
+      "name": "TIRAMISU LOTUS",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "TIRAMISU",
+      "available": true
+    },
+    {
+      "id": "p098",
+      "name": "AU CHOCOLAT",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "TIRAMISU",
+      "available": true
+    },
+    {
+      "id": "p099",
+      "name": "CHEESECAKE BUENO",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "CHEESE-CAKE",
+      "available": true
+    },
+    {
+      "id": "p100",
+      "name": "CHOCOLAT",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "CHEESE-CAKE",
+      "available": true
+    },
+    {
+      "id": "p101",
+      "name": "CHEESECAKE FERRERO",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CHEESECAKE_FERRERO.png",
+      "cat": "CHEESE-CAKE",
+      "available": true
+    },
+    {
+      "id": "p102",
+      "name": "CHEESECAKE PISTACHE",
+      "price": 700,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CHEESECAKE_PISTACHE.png",
+      "cat": "CHEESE-CAKE",
+      "available": true
+    },
+    {
+      "id": "p103",
+      "name": "CHEESECAKE MANGUE",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CHEESECAKE_MANGUE.png",
+      "cat": "CHEESE-CAKE",
+      "available": true
+    },
+    {
+      "id": "p104",
+      "name": "CHEESECAKE FRAISE",
+      "price": 550,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CHEESECAKE_FRAISE.png",
+      "cat": "CHEESE-CAKE",
+      "available": true
+    },
+    {
+      "id": "p105",
+      "name": "CHEESECAKE LOTUS",
+      "price": 700,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CHEESECAKE_LOTUS.png",
+      "cat": "CHEESE-CAKE",
+      "available": true
+    },
+    {
+      "id": "p106",
+      "name": "CARAMEL BEURRE SALÉ",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "AFFOGATO",
+      "available": true
+    },
+    {
+      "id": "p107",
+      "name": "PISTACHE",
+      "price": 700,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "AFFOGATO",
+      "available": true
+    },
+    {
+      "id": "p108",
+      "name": "CHOCOLAT",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "AFFOGATO",
+      "available": true
+    },
+    {
+      "id": "p109",
+      "name": "VANILLE",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "AFFOGATO",
+      "available": true
+    },
+    {
+      "id": "p110",
+      "name": "TOAST CHOCOLAT",
+      "price": 350,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "SWEET TOAST",
+      "available": true
+    },
+    {
+      "id": "p111",
+      "name": "TOAST BANANE",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "SWEET TOAST",
+      "available": true
+    },
+    {
+      "id": "p112",
+      "name": "TOAST NUTELLA",
+      "price": 550,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "SWEET TOAST",
+      "available": true
+    },
+    {
+      "id": "p113",
+      "name": "TARTE AUX POMMES",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "CAKES",
+      "available": true
+    },
+    {
+      "id": "p114",
+      "name": "ENERGY CAKE",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "CAKES",
+      "available": true
+    },
+    {
+      "id": "p115",
+      "name": "HEALTHY CAKE",
+      "price": 350,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "CAKES",
+      "available": true
+    },
+    {
+      "id": "p116",
+      "name": "TROMPE L'OEIL",
+      "price": 600,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_TROMPE_L_OEIL.png",
+      "cat": "CAKES",
+      "available": true
+    },
+    {
+      "id": "p117",
+      "name": "SALMON BRUNCH",
+      "price": 1500,
+      "desc": "Pain grillé, Saumon fumé, Sauce Pesto, Salade, Tomate, Concombre, Persil, Noix, Confiture, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_SALMON_BRUNCH.png",
+      "cat": "CLASSICS",
+      "available": true
+    },
+    {
+      "id": "p118",
+      "name": "BRUNCH & CO",
+      "price": 1800,
+      "desc": "Pain grillé, Fromage, Avocat, Saumon fumé, Salade, Tomate, Concombre, Persil, Noix, Confiture, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_BRUNCH_CO.png",
+      "cat": "CLASSICS",
+      "available": true
+    },
+    {
+      "id": "p119",
+      "name": "AVOCADO BRUNCH",
+      "price": 1200,
+      "desc": "Pain grillé, Avocat, Salade, Mais, Tomate, Concombre, Persil, Noix, Confiture, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_AVOCADO_BRUNCH.png",
+      "cat": "CLASSICS",
+      "available": true
+    },
+    {
+      "id": "p120",
+      "name": "CLASSIC BRUNCH",
+      "price": 600,
+      "desc": "Pain grillé, Œuf, Salade, Tomate, Concombre, Persil, Noix, Confiture, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_CLASSIC_BRUNCH.png",
+      "cat": "CLASSICS",
+      "available": true
+    },
+    {
+      "id": "p121",
+      "name": "CHEESES BRUNCH",
+      "price": 650,
+      "desc": "Pain grillé, 3 Fromages, Salade, Tomate, Concombre, Persil, Noix, Confiture, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_CHEESES_BRUNCH.png",
+      "cat": "CLASSICS",
+      "available": true
+    },
+    {
+      "id": "p122",
+      "name": "MUSHROOM BRUNCH",
+      "price": 800,
+      "desc": "Pain grillé, Champignons, Salade, Tomate, Concombre, Persil, Epinards, Noix, Confiture, Fruits",
+      "tag": "",
+      "image": "Brunch_Co_MUSHROOM_BRUNCH.png",
+      "cat": "CLASSICS",
+      "available": true
+    },
+    {
+      "id": "p123",
+      "name": "SMOKED CHIKEN",
+      "price": 550,
+      "desc": "Poulet Fumé, Oignon caramélisé, Salade",
+      "tag": "",
+      "image": "",
+      "cat": "SANDWICH",
+      "available": true
+    },
+    {
+      "id": "p124",
+      "name": "THON",
+      "price": 450,
+      "desc": "Thon, Fromage, Salade",
+      "tag": "",
+      "image": "",
+      "cat": "SANDWICH",
+      "available": true
+    },
+    {
+      "id": "p125",
+      "name": "CHEESES",
+      "price": 650,
+      "desc": "Cheddar, Mozzarella, Fromage blanc, (Fromage rouge/Gruyère), Salade",
+      "tag": "",
+      "image": "",
+      "cat": "SANDWICH",
+      "available": true
+    },
+    {
+      "id": "p126",
+      "name": "BRUNCH & CO",
+      "price": 850,
+      "desc": "Poulet Fumé, Sauce Pesto, 3 Fromages, Salade, Fruits",
+      "tag": "",
+      "image": "",
+      "cat": "SANDWICH",
+      "available": true
+    },
+    {
+      "id": "p127",
+      "name": "01 BOULE",
+      "price": 300,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "GELATO",
+      "available": true
+    },
+    {
+      "id": "p128",
+      "name": "CROISSANT MANGUE",
+      "price": 650,
+      "desc": "",
+      "tag": "",
+      "image": "",
+      "cat": "SWEET CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p129",
+      "name": "CROISSANT PISTACHE",
+      "price": 700,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_PISTACHE.png",
+      "cat": "SWEET CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p130",
+      "name": "CROISSANT SIMPLE",
+      "price": 100,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_SIMPLE.png",
+      "cat": "SWEET CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p131",
+      "name": "CROISSANT BANANE",
+      "price": 500,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_BANANE.png",
+      "cat": "SWEET CROISSANTS",
+      "available": true
+    },
+    {
+      "id": "p132",
+      "name": "CROISSANT CHOCOLAT",
+      "price": 400,
+      "desc": "",
+      "tag": "",
+      "image": "Brunch_Co_CROISSANT_CHOCOLAT.png",
+      "cat": "SWEET CROISSANTS",
+      "available": true
+    }
+  ],
+  "info": {
+    "name": "Brunch & Co",
+    "tagline": "Healthy food • Brunch & Drinks\nBrunch & Company - Là où les saveurs se rencontrent.",
+    "address": "Rue Said Ouzeffoune, Tizi Ouzou",
+    "phone": "0552841547",
+    "email": "louizyousfi@gmail.com",
+    "hours": "Lundi au Jeudi : 8h00 – 22h00 • Vendredi : Fermé • Samedi : 8h30 – 22h00 • Dimanche : 8h00 – 22h00",
+    "instagram": "https://www.instagram.com/brunch__company?exln=cGVkNWxybXRyMHp1&utm_source=qr",
+    "facebook": "https://www.facebook.com/share/19wGR1ZLuY/?mibextid=wwXIfr%20E",
+    "note": "Wi-Fi disponible • Espace calme et confortable pour travailler."
+  },
+  "theme": {
+    "bg": "#226677",
+    "accent": "#226677"
+  }
+}
