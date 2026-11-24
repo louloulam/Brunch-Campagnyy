@@ -26,7 +26,9 @@
     "GELATO",
     "SWEET CROISSANTS"
   ],
-  "hiddenCats": [],
+  "hiddenCats": [
+    "AFFOGATO"
+  ],
   "items": [
     {
       "id": "p001",
@@ -1156,7 +1158,7 @@
       "tag": "",
       "image": "",
       "cat": "CAKES",
-      "available": true
+      "available": false
     },
     {
       "id": "p114",
@@ -1176,7 +1178,7 @@
       "tag": "",
       "image": "",
       "cat": "CAKES",
-      "available": true
+      "available": false
     },
     {
       "id": "p116",
@@ -1186,7 +1188,7 @@
       "tag": "",
       "image": "Brunch_Co_TROMPE_L_OEIL.png",
       "cat": "CAKES",
-      "available": true
+      "available": false
     },
     {
       "id": "p117",
