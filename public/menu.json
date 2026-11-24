@@ -856,7 +856,7 @@
       "price": 1300,
       "desc": "Crevette, Crème avocat, Salade, Fruits",
       "tag": "",
-      "image": "Brunch_Co_CREVETTE_TOAST.png",
+      "image": "/api/image/2bf7189f-c608-456b-b4b5-2ffe753fc6d7",
       "cat": "SAVORY TOASTS",
       "available": true
     },
