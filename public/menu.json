@@ -338,7 +338,7 @@
       "tag": "",
       "image": "Brunch_Co_CROISSANT_CREVETTE.png",
       "cat": "SAVORY CROISSANTS",
-      "available": true
+      "available": false
     },
     {
       "id": "p032",
@@ -506,7 +506,7 @@
       "price": 650,
       "desc": "FRAISE, GRANOLA, DATTES",
       "tag": "",
-      "image": "",
+      "image": "/api/image/e6ed5438-51bc-4a1c-b119-6399f55b7868",
       "cat": "YOGURT BOWL",
       "available": true
     },
