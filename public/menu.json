@@ -980,7 +980,7 @@
     },
     {
       "id": "p096",
-      "name": "SIMPLE",
+      "name": "TIRAMISU SIMPLE",
       "price": 450,
       "desc": "",
       "tag": "",
@@ -1334,7 +1334,7 @@
       "price": 500,
       "desc": "",
       "tag": "",
-      "image": "Brunch_Co_CROISSANT_BANANE.png",
+      "image": "/api/image/0a1bb0a2-1272-468d-813a-003b4cd5683a",
       "cat": "SWEET CROISSANTS",
       "available": true
     },
