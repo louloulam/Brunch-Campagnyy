@@ -964,7 +964,7 @@
       "price": 497,
       "desc": "",
       "tag": "",
-      "image": "",
+      "image": "/api/image/e63ae1f2-18be-4062-a230-5384bda65cc2",
       "cat": "TIRAMISU",
       "available": true
     },
@@ -974,7 +974,7 @@
       "price": 650,
       "desc": "",
       "tag": "",
-      "image": "",
+      "image": "/api/image/6ef08977-6410-4760-8d1b-6f2ca8b5a228",
       "cat": "TIRAMISU",
       "available": true
     },
