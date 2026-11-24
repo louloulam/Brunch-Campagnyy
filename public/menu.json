@@ -746,7 +746,7 @@
       "price": 600,
       "desc": "",
       "tag": "",
-      "image": "",
+      "image": "/api/image/9db69bfd-42c3-4ba4-be6e-2c1c59f560bd",
       "cat": "MILKSHAKES",
       "available": true
     },
@@ -836,7 +836,7 @@
       "price": 350,
       "desc": "Œuf, Fromage blanc, Salade, Fruits",
       "tag": "",
-      "image": "",
+      "image": "/api/image/004e2547-6444-42f9-a278-0e745a91c39d",
       "cat": "SAVORY TOASTS",
       "available": true
     },
